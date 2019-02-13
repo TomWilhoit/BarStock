@@ -16,7 +16,7 @@ class Inventory extends Component {
     this.displayCategories = this.displayCategories.bind(this);
     this.toggleCategories = this.toggleCategories.bind(this);
 
-    // console.log('props ', props.allProducts[0])
+    
     // console.log('this state ', this.state.allLiquorCats);
     // console.log('this state ', this.state.allBeerCats);
   }
@@ -58,7 +58,7 @@ class Inventory extends Component {
       return <li key={el.inventory_code}>{el.product}</li>
     })
   }
-
+ 
   render() {
 <<<<<<< Updated upstream
     this.props.allProducts[0].forEach((product, index) => {
