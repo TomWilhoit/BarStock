@@ -7,7 +7,7 @@ import './css/Totals.css';
 
 const Totals = () => {
   return (
-    <div className="Header">
+    <div className="Totals">
       <h2>Totals</h2>
     </div>
   );

@@ -3,10 +3,14 @@ import MockData from './mockData.js';
 import App from './App.js';
 import './css/Header.css';
 
+import BarLogo from './BarStock_Logo.png'
+
 const Header = () => {
   return (
     <div className="Header">
-      <h2>Header</h2>
+      <div className="logo-container">
+        <img src={BarLogo} alt="Bar Stock"/>
+      </div>
     </div>
   );
 };
