@@ -11,7 +11,7 @@ class InventoryTypes extends Component {
     
     render() {
         return (
-            <li>{this.props.types}</li>
+            <li>{this.props.types} change</li>
         )
     }
 
