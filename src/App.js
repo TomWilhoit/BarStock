@@ -13,14 +13,17 @@ class App extends Component {
     super();
     this.state = {
       allProducts: [MockData.distributor[0].inventory], 
-      allMenu: [MockData.menu]
+      allMenu: [MockData.menu],
+      cartItems: [],
+      totalCost: 0,
+      totalProjected: 0,
+      currentUser: ""
     }
   }
   toggleAlert() {
     alert('toggle');
   }
   render() {
-    console.log(this.state.allMenu)
     return (
       <div className="App">
         <div className="Login-container">
@@ -30,10 +33,11 @@ class App extends Component {
           <Header/>
         </div>
         <div className="Inventory-container">
-          <Inventory/>
+          <Inventory allProducts={this.state.allProducts}/>
         </div>
         <div className="Totals-container">
-          <Totals/>
+          <Totals allProducts={this.state.allProducts} 
+                  allMenu={this.state.allMenu} />
         </div>
         <div className="Footer-container">
           <Footer/>
