@@ -9,7 +9,18 @@ import Login from './Login.js';
 
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      allProducts: [MockData.distributor[0].inventory], 
+      allMenu: [MockData.menu]
+    }
+  }
+  toggleAlert() {
+    alert('toggle');
+  }
   render() {
+    console.log(this.state.allMenu)
     return (
       <div className="App">
         <div className="Login-container">
