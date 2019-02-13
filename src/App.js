@@ -8,6 +8,7 @@ import Footer from './Footer.js';
 import Login from './Login.js';
 
 
+
 class App extends Component {
   constructor() {
     super();
@@ -26,9 +27,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Login-container">
+        {/* <div className="Login-container">
           <Login/>
-        </div>
+        </div> */}
         <div className="Header-container">
           <Header/>
         </div>
