@@ -7,11 +7,24 @@ import './css/InventoryTypes.css';
 class InventoryTypes extends Component {
     constructor(props) {
         super(props);
+<<<<<<< Updated upstream
     }
     
     render() {
         return (
             <li>{this.props.types}</li>
+=======
+        this.state = {
+
+          }
+    }
+    // console.log('in types ', props);
+   
+    
+    render() {
+        return (
+            <div>Hellos</div>
+>>>>>>> Stashed changes
         )
     }
 
