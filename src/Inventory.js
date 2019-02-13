@@ -4,12 +4,33 @@ import App from './App.js';
 import './css/Inventory.css';
 
 
-const Inventory = () => {
-  return (
-    <div className="Inventory">
-      <h2>Inventory</h2>
-    </div>
-  );
+class Inventory extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+
+  }
+
+  displayCategories() {
+    let testVar = this.props.allProducts[0].map( product => {
+      return product.category;
+    });
+  }
+
+  render() {
+    return (
+      <div className="Inventory">
+        <h2>Inventory</h2>
+        { this.displayCategories() }
+        {/* { 
+          this.props.allProducts.map(product => {
+      return product.category})
+    } */}
+      </div>
+    );
+  }
 };
 
 
