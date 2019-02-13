@@ -279,6 +279,15 @@ const distributor = [
         "unit": "case"
       },
       {
+        "product": "Lagunitas IPA",
+        "inventory_code": 10034,
+        "type": "beer",
+        "category": "indian pale ale",
+        "price": 32.12,
+        "size": 24,
+        "unit": "case"
+      },
+      {
         "product": "Oskar Blues Dales",
         "inventory_code": 10031,
         "type": "beer",
@@ -302,15 +311,6 @@ const distributor = [
         "inventory_code": 10033,
         "type": "beer",
         "category": "sour",
-        "price": 32.12,
-        "size": 24,
-        "unit": "case"
-      },
-      {
-        "product": "Lagunitas IPA",
-        "inventory_code": 10034,
-        "type": "beer",
-        "category": "indian pale ale",
         "price": 32.12,
         "size": 24,
         "unit": "case"
