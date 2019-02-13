@@ -9,6 +9,7 @@ class Inventory extends Component {
   constructor(props) {
     super(props);
     this.state = {
+<<<<<<< Updated upstream
       allLiquorCats: [],
       allBeerCats: []
     }
@@ -32,12 +33,34 @@ class Inventory extends Component {
   displayCategories(search) {
     return this.props.allProducts[0].filter(function (cat) { 
       return cat.category === search;
+=======
+      allLiquor: [],
+      allBeer: []
+    }
+    this.displayCategories = this.displayCategories.bind(this);
+    this.toggleCategories = this.toggleCategories.bind(this);
+  }
+
+  toggleCategories(event) {
+    let thisToggle = event.target;
+    let allTogglesClick = document.querySelectorAll('.toggle-select')
+    allTogglesClick.forEach((el, i) => {
+      el.classList.remove('inactive');
+    })
+    thisToggle.classList.add('inactive');
+  }
+
+  displayCategories(ex) {
+    return this.props.allProducts[0].filter(function (cat) { 
+      return cat.category === ex;
+>>>>>>> Stashed changes
     }).map(function (el) {  
       return <li key={el.inventory_code}>{el.product}</li>
     })
   }
  
   render() {
+<<<<<<< Updated upstream
     this.props.allProducts[0].forEach((product, index) => {
       if(!this.state.allLiquorCats.includes(product.category) && product.type === 'liquor'){
         this.state.allLiquorCats.push(product.category)
@@ -47,6 +70,8 @@ class Inventory extends Component {
       } 
     })
 
+=======
+>>>>>>> Stashed changes
     return (
       <div className="Inventory">
         <div className="Inventory-toggles">
@@ -58,6 +83,7 @@ class Inventory extends Component {
           </a>
         </div>
         <div className="Category-display">
+<<<<<<< Updated upstream
           <ul>
             { 
               this.state.allLiquorCats.map((inventory, index) => {
@@ -65,6 +91,12 @@ class Inventory extends Component {
               })
               }
           </ul>
+=======
+          <InventoryTypes />
+          {
+            // <ul>{this.displayCategories('whiskey')}</ul>
+          }
+>>>>>>> Stashed changes
         </div>
       </div>
     );

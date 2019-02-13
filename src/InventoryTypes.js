@@ -7,14 +7,14 @@ import './css/InventoryTypes.css';
 class InventoryTypes extends Component {
     constructor(props) {
         super(props);
+
     }
     
     render() {
         return (
-            <li>{this.props.types} change</li>
-        )
+            <li>{this.props.types}</li>
+               )
     }
-
 }
 
 export default InventoryTypes;
