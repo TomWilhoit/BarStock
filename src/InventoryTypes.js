@@ -7,16 +7,11 @@ import './css/InventoryTypes.css';
 class InventoryTypes extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-          }
     }
-    // console.log('in types ', props);
-   
     
     render() {
         return (
-            <div>Hellos</div>
+            <li>{this.props.types}</li>
         )
     }
 
