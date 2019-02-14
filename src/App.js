@@ -13,14 +13,40 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      allProducts: [MockData.distributor[0].inventory], 
-      allMenu: [MockData.menu],
+      allProducts: [], 
+      allMenu: [],
       cartItems: [],
       totalCost: 0,
       totalProjected: 0,
       currentUser: ""
     }
   }
+
+  componentDidMount() {
+    fetch("http://whateverly-datasets.herokuapp.com/api/v1/distributor")
+      .then(response=> response.json())
+      .then(supplier => {
+        this.setState({
+          allProducts: supplier.distributor[0].inventory
+        });
+      })
+      .catch(error => {
+        throw new Error(error);
+      });
+
+    fetch("http://whateverly-datasets.herokuapp.com/api/v1/menu")
+      .then(response => response.json())
+      .then(products => {
+        this.setState({
+          allMenu: products.menu
+        });
+      })
+      .catch(error => {
+        throw new Error(error);
+      });
+  }
+
+
   toggleAlert() {
     alert('toggle');
   }

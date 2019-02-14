@@ -38,7 +38,7 @@ class Inventory extends Component {
   }
 
   displayCategories(ex) {
-    return this.props.allProducts[0].filter(function (cat) { 
+    return this.props.allProducts.filter(function (cat) { 
       return cat.category === ex;
     }).map(function (el) {  
       return <li key={el.inventory_code}>{el.product}</li>
@@ -46,7 +46,7 @@ class Inventory extends Component {
   }
  
   render() {
-    this.props.allProducts[0].forEach((product, index) => {
+    this.props.allProducts.forEach((product, index) => {
       if(!this.state.allLiquorCats.includes(product.category) && product.type === 'liquor'){
         this.state.allLiquorCats.push(product.category)
       } 
@@ -81,7 +81,7 @@ class Inventory extends Component {
             { 
               
               displayCategory.map((inventory, index) => {
-                return <InventoryCats types={inventory} key={inventory} products={this.props.allProducts[0]} />
+                return <InventoryCats types={inventory} key={inventory} products={this.props.allProducts} />
               })
               }
           </ul>
