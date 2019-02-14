@@ -19,7 +19,6 @@
 .toggle-select {
     text-align: center;
     width: 50%;
-    background: #3ebab4;
     color: #fff;
     padding: 1em;
     font-weight: bold;
@@ -27,18 +26,21 @@
     cursor: pointer;
     transition: all .5s ease;
     font-family: 'Abel', sans-serif;
+    background: #3ebab4;
 }
 
-.toggle-select:hover {
+/* .toggle-select:hover {
     background: #cccccc;
-}
+} */
 
 .toggle-select.inactive {
     background: #cccccc;
 }
 
+
 .toggle-select h3 {
     margin: 0;
+    
 }
 
 .Category-display {
