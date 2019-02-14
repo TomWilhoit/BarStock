@@ -10,7 +10,8 @@ class Inventory extends Component {
     super(props);
     this.state = {
       allLiquorCats: [],
-      allBeerCats: []
+      allBeerCats: [],
+      displayState: 1
     }
     this.displayCategories = this.displayCategories.bind(this);
     this.toggleCategories = this.toggleCategories.bind(this);
@@ -21,12 +22,19 @@ class Inventory extends Component {
   }
 
   toggleCategories(event) {
-    // let thisToggle = event.target;
-    // let allTogglesClick = document.querySelectorAll('.toggle-select')
-    // allTogglesClick.forEach((el, i) => {
-    //   el.classList.remove('inactive');
-    // })
-    // thisToggle.classList.add('inactive');
+    let beerToggle = document.getElementById('0');
+    let liquorToggle = document.getElementById('1');
+    
+    
+    if(this.state.displayState === 0){
+      beerToggle.classList.remove('inactive');
+      liquorToggle.classList.add('inactive')
+      this.setState({displayState : 1})
+    }else if(this.state.displayState === 1){
+      liquorToggle.classList.remove('inactive');
+      beerToggle.classList.add('inactive')
+      this.setState({displayState : 0})
+    }
   }
 
   displayCategories(ex) {
@@ -45,22 +53,34 @@ class Inventory extends Component {
       if (!this.state.allBeerCats.includes(product.category) && product.type === 'beer') {
         this.state.allBeerCats.push(product.category)
       } 
+
+
     })
+
+    let displayCategory;
+
+    if(this.state.displayState === 0){
+      displayCategory = this.state.allLiquorCats;
+    }else if(this.state.displayState === 1){
+      displayCategory = this.state.allBeerCats;
+    }
+
 
     return (
       <div className="Inventory">
         <div className="Inventory-toggles">
-          <a className="toggle-select inactive" onClick={this.toggleCategories}>
+          <a id="0" className="toggle-select" onClick={this.toggleCategories}>
             <h3><i className="fas fa-beer"></i> Beer</h3>
           </a>
-          <a className="toggle-select" onClick={this.toggleCategories}>
+          <a id="1" className="toggle-select inactive" onClick={this.toggleCategories}>
             <h3><i className="fas fa-glass-whiskey"></i> Liquor</h3>
           </a>
         </div>
         <div className="Category-display">
           <ul>
             { 
-              this.state.allLiquorCats.map((inventory, index) => {
+              
+              displayCategory.map((inventory, index) => {
                 return <InventoryTypes types={inventory} key={inventory} />
               })
               }
