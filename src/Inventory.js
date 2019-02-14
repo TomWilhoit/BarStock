@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MockData from './mockData.js';
 import App from './App.js';
-import InventoryTypes from './InventoryTypes.js';
+import InventoryCats from './InventoryCats.js';
 import './css/Inventory.css';
 
 
@@ -30,7 +30,7 @@ class Inventory extends Component {
       beerToggle.classList.remove('inactive');
       liquorToggle.classList.add('inactive')
       this.setState({displayState : 1})
-    }else if(this.state.displayState === 1){
+    } else if(this.state.displayState === 1) {
       liquorToggle.classList.remove('inactive');
       beerToggle.classList.add('inactive')
       this.setState({displayState : 0})
@@ -81,7 +81,7 @@ class Inventory extends Component {
             { 
               
               displayCategory.map((inventory, index) => {
-                return <InventoryTypes types={inventory} key={inventory} />
+                return <InventoryCats types={inventory} key={inventory} products={this.props.allProducts[0]} />
               })
               }
           </ul>
