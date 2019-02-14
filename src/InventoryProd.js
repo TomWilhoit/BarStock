@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import App from './App.js';
 import Inventory from './Inventory.js';
-import InventoryCats from './InventoryCats.js';
-import './css/InventoryProds.css';
+import InventoryCats from './InventoryCat.js';
+import './css/InventoryProd.css';
 
 
-class InventoryProds extends Component {
+class InventoryProd extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,17 +20,16 @@ class InventoryProds extends Component {
         let boundProps = this.props;
         return (
             <div>
-             {
-                 boundProps.allProducts.filter(function (inventory) { 
-                    return inventory.category === boundProps.productType;
-                  }).map(function (el) {  
-                    return <p key={el.inventory_code}>{el.product}</p>
-                  })
-
+            {
+            boundProps.allProducts.filter(function (inventory) { 
+                return inventory.category === boundProps.productType;
+            }).map(function (el) {  
+                return <p key={el.inventory_code}>{el.product}</p>
+            })
             }
             </div>
         )
     }
 }
 
-export default InventoryProds;
+export default InventoryProd;
