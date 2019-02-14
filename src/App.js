@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MockData from './mockData.js'
 import './css/App.css';
 import Inventory from './Inventory.js';
 import Totals from './Totals.js';
@@ -13,9 +12,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      allProducts: [], 
+      allDistributors: [],
+      allInventory: [], 
       allMenu: [],
-      cartItems: [],
+      cartItems: [10001, 10002, 10003],
       totalCost: 0,
       totalProjected: 0,
       currentUser: ""
@@ -27,7 +27,8 @@ class App extends Component {
       .then(response=> response.json())
       .then(supplier => {
         this.setState({
-          allProducts: supplier.distributor[0].inventory
+          allInventory: supplier.distributor[0].inventory,
+          allDistributors: supplier.distributor[0]
         });
       })
       .catch(error => {
@@ -50,7 +51,9 @@ class App extends Component {
   toggleAlert() {
     alert('toggle');
   }
+
   render() {
+    // console.log('allProducts ', this.state.allProducts.inventory)
     return (
       <div className="App">
         {/* <div className="Login-container">
@@ -60,11 +63,13 @@ class App extends Component {
           <Header/>
         </div>
         <div className="Inventory-container">
-          <Inventory allProducts={this.state.allProducts}/>
+          <Inventory allInventory={this.state.allInventory}/>
         </div>
         <div className="Totals-container">
-          <Totals allProducts={this.state.allProducts} 
-                  allMenu={this.state.allMenu} />
+          <Totals allInventory={this.state.allInventory} 
+                  allMenu={this.state.allMenu} 
+                  cartItems={this.state.cartItems}
+                  />
         </div>
         <div className="Footer-container">
           <Footer/>
