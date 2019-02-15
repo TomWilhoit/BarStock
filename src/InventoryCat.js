@@ -22,14 +22,15 @@ class InventoryCat extends Component {
         if (this.props.category === this.props.toggleState) {
             return (
                 <div className="liquorProd open" onClick={this.toggleProd}>
-                    <li className="Product">{this.props.category}</li>
+                    <li className="Category">{this.props.category}</li>
+                    <div className="Single-product header"><span>Product</span><span>Price</span><span>Quantity</span></div>
                     <InventoryProd allProducts={this.props.products} productType={this.props.category} />
                 </div>
             )
         } else {
             return (
                 <div className="liquorProd closed" onClick={this.toggleProd}>
-                    <li>{this.props.category}</li>
+                    <li className="Category">{this.props.category}</li>
                 </div>
             )
         }
@@ -37,3 +38,5 @@ class InventoryCat extends Component {
 }
 
 export default InventoryCat;
+
+                                
