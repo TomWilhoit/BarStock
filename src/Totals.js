@@ -9,50 +9,52 @@ class Totals extends Component {
   constructor(props) {
     super(props);
     this.state ={
-      cartCodes: props.cartItems,
-      cartObjs: []
+      cartObjs: props.cartItems, 
+      cartNew: props.cartMenu
     }
   }
 
   
-  //Props.cartItems is an array of inventory codes.
-  //I want to iterate over each object in the distributor.inventory array, find the object with the matching inventory code and return that object and put it in array cartObjects. 
-  //Iterate over cartObjects and use reduce to return a sum. 
+
+  totalCost = () => {
+    return this.state.cartObjs.reduce((acc, currObj) => {
+      return acc += currObj.price; 
+    }, 0)
+  }
+
+  
+
+  totalProfit = () => {
+    let matchingObject; 
+    return this.state.cartObjs.reduce((acc, currObj) => {
+      
+      
+  
+        matchingObject = this.state.cartNew.find(item => {
+          return item.inventory_code === currObj.inventory_code;
+        });
+        
+        console.log(matchingObject.product)
+      
+      
+    
+        return acc; 
+    }, 0)
+  }
+
+
+
   
   render() {
-    
-    this.state.cartObjs = this.state.cartCodes.map(code => {
-      let matchingObject = this.props.allInventory.find(item => {
-        return item.inventory_code === code;
-      });
-      return matchingObject;
-    })
-
-
-    // this.state.cartObjs = objs;
-  
-
-    console.log(this.state.cartObjs[0])
-    
-    let sum = this.state.cartObjs.reduce((acc, currObj) => {
-      // acc++
-      // console.log(currObj.price)
-      // return acc + currObj.price; 
-    }, 0)
-
-    // console.log(sum);
-    // let sum = 0;
-
-    this.state.cartObjs.forEach((el, i) => {
-      // console.log(el);
-      // sum += el.price;
-    })
-
-    // console.log(sum);
-
+    // console.log(this.state)
     return (
       <div className="Totals">
-        <h2>Totals</h2>
+        <h3>Total Cost</h3>
+        <h2>{this.totalCost()}</h2>
+        <br/>
+        <h3>Potential Profit</h3>
+        <h2>{this.totalProfit()}</h2>
+        {/* <h2>{this.totalProfit()}</h2> */}
       </div>
     );
   }
