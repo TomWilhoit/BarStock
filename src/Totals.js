@@ -24,11 +24,13 @@ class Totals extends Component {
         let menuObj = this.state.cartNew.find(item => {
           return item.inventory_code === currObj.inventory_code;
         });
+
         let dSize = currObj.size; // Distributor Product Serving Size
         let mSize = menuObj.serving_size; // Menu Product Serving Size
         let mPrice = menuObj.price_per_drink; // Menu Product Price Per Drink
         let dCost = currObj.price; // Distributor Product Cost
         return acc += (((dSize/mSize) * mPrice) - dCost); 
+
     }, 0)
   }
 

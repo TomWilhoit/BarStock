@@ -12,6 +12,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      loginDisplay: true,
       allDistributors: [],
       allInventory: [], 
       allMenu: [],
@@ -102,16 +103,27 @@ class App extends Component {
     alert('toggle');
   }
 
+
+  toggleLogin = () => {
+    if(this.state.loginDisplay===true){
+    this.setState({loginDisplay:false})
+    }else if(this.state.loginDisplay === false){
+      this.setState({loginDisplay:true})
+    }
+  }
+
+
   render() {
-    // console.log('allProducts ', this.state.allProducts.inventory)
     return (
       <div className="App">
-        {/* <div className="Login-container">
-          <Login/>
-        </div> */}
+        <div className="Login-container">
+          <Login  loginDisplay={this.state.loginDisplay}
+                  toggleLogin={this.toggleLogin}/>
+        </div>
         <div className="Header-container">
           <Header/>
         </div>
+        <div></div>
         <div className="Inventory-container">
           <Inventory allInventory={this.state.allInventory}/>
         </div>
