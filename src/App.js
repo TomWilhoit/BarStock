@@ -15,7 +15,57 @@ class App extends Component {
       allDistributors: [],
       allInventory: [], 
       allMenu: [],
-      cartItems: [10001, 10002, 10003],
+      cartItems: [{
+        "product": "Fireball",
+        "inventory_code": 10001,
+        "type": "liquor",
+        "category": "whiskey",
+        "price": 18.78,
+        "size": 33.8,
+        "unit": "ounces"
+      },
+      {
+        "product": "Jim Beam",
+        "inventory_code": 10002,
+        "type": "liquor",
+        "category": "whiskey",
+        "price": 16.99,
+        "size": 25.3,
+        "unit": "ounces"
+      },
+      {
+        "product": "Jack Daniels",
+        "inventory_code": 10003,
+        "type": "liquor",
+        "category": "whiskey",
+        "price": 28.80,
+        "size": 33.8,
+        "unit": "ounces"
+      }],
+      cartMenu: [{
+        "product": "Fireball",
+        "inventory_code": 10001,
+        "price_per_drink": 3,
+        "serving_size": 1.5,
+        "unit": "ounces",
+        "tier": "mid"
+      },
+      {
+        "product": "Jim Beam",
+        "inventory_code": 10002,
+        "price_per_drink": 5,
+        "serving_size": 1.5,
+        "unit": "ounces",
+        "tier": "mid"
+      },
+      {
+        "product": "Jack Daniels",
+        "inventory_code": 10003,
+        "price_per_drink": 6,
+        "serving_size": 1.5,
+        "unit": "ounces",
+        "tier": "mid"
+      }],
       totalCost: 0,
       totalProjected: 0,
       currentUser: ""
@@ -66,8 +116,7 @@ class App extends Component {
           <Inventory allInventory={this.state.allInventory}/>
         </div>
         <div className="Totals-container">
-          <Totals allInventory={this.state.allInventory} 
-                  allMenu={this.state.allMenu} 
+          <Totals cartMenu={this.state.cartMenu}
                   cartItems={this.state.cartItems}
                   />
         </div>
