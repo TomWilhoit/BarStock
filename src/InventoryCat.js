@@ -18,26 +18,17 @@ class InventoryCat extends Component {
     }
 
 
-
     render() {
-        const bigDiv = {
-            height: '37px',
-        };
-
-        const smallDiv = {
-            height: '100%',
-        };
-
         if (this.props.category === this.props.toggleState) {
-        return (
-            <div className="liquorProd" onClick={this.toggleProd} style={smallDiv}>
-                <li>{this.props.category}</li>
-                <InventoryProd allProducts={this.props.products} productType={this.props.category} />
-            </div>
-        )
-        } else{
             return (
-                <div className="liquorProd" onClick={this.toggleProd} style={bigDiv}>
+                <div className="liquorProd open" onClick={this.toggleProd}>
+                    <li className="Product">{this.props.category}</li>
+                    <InventoryProd allProducts={this.props.products} productType={this.props.category} />
+                </div>
+            )
+        } else {
+            return (
+                <div className="liquorProd closed" onClick={this.toggleProd}>
                     <li>{this.props.category}</li>
                 </div>
             )
