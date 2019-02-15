@@ -43,22 +43,4 @@
     
 }
 
-.Category-display {
 
-}
-
-.Category-display ul {
-    margin: auto;
-    width: 80%;
-    padding: 1em 0;
-}
-
-.Category-display ul li {
-    list-style-type: none;
-    text-align: center;
-    padding: .5em;
-    color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
-    background: #231f20;
-    margin: .5em;
-}
