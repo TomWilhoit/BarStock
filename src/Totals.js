@@ -34,7 +34,7 @@ class Totals extends Component {
           return item.inventory_code === currObj.inventory_code;
         });
         
-        console.log(matchingObject.product)
+        // console.log(matchingObject.product)
       
       
     
