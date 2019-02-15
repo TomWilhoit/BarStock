@@ -64,7 +64,7 @@ class Inventory extends Component {
 
     let displayCategories;
 
-    if(this.state.displayType === 0) {
+    if (this.state.displayType === 0) {
       displayCategories = this.state.allLiquorCats;
     } else if(this.state.displayType === 1) {
       displayCategories = this.state.allBeerCats;
