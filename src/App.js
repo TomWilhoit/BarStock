@@ -51,14 +51,13 @@ class App extends Component {
 
 
   changeCart = (item, math) => {
+    const allCartItems = this.state.cartItems
     if (math === "plusOne") {
-      console.log("add");
+      allCartItems.push(item);
       this.setState({
-        cartItems : this.state.cartItems.concat(item)
+        cartItems : allCartItems
       })
     } else {
-      console.log("subtract");
-      const allCartItems = this.state.cartItems
       const foundItem = allCartItems.findIndex(cartItem => {
         return cartItem === item;
       });
@@ -68,7 +67,6 @@ class App extends Component {
       })
     }
   }
-
 
   toggleLogin = () => {
     if(this.state.loginDisplay===true){
@@ -94,6 +92,7 @@ class App extends Component {
         <div className="Totals-container">
           <Totals cartMenu={this.state.allMenu}
                   cartItems={this.state.cartItems}
+                  changeCart={this.changeCart}
                   />
         </div>
         <div className="Footer-container">
