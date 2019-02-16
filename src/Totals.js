@@ -13,6 +13,18 @@ class Totals extends Component {
     }
   }
 
+  displayCart = () => {
+    return this.props.cartItems.map(item => {
+      return <div key={item.inventory_code}>
+        <span>{item.product}</span>
+        <span>${item.price}</span>
+          <span>
+              <button onClick={this.props.changeCart}><i className="fas fa-minus-square"></i></button>
+          </span>
+      </div>
+    })
+  }
+
   totalCost = () => {
     return this.props.cartItems.reduce((acc, currObj) => {
       return acc += currObj.price; 
@@ -37,6 +49,9 @@ class Totals extends Component {
   render() {
     return (
       <div className="Totals">
+        <section> 
+          {this.displayCart()}
+        </section>
         <section>
           <h3>Total Cost</h3>
           <h2>${this.totalCost().toFixed(2)}</h2>

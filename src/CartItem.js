@@ -19,11 +19,13 @@ class CartItem extends Component {
     }
 
     minusProduct = event => {
+        if (this.state.quantity > 0) {
         this.props.changeCart(this.props.product, "minusOne");
         const decreaseQuantity = {
             quantity: this.state.quantity - 1
         }
-        this.setState(decreaseQuantity)
+        this.setState(decreaseQuantity)   
+        }
     }
 
     render() {
