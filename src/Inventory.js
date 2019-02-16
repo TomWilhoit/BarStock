@@ -11,7 +11,7 @@ class Inventory extends Component {
       allLiquorCats: [],
       allBeerCats: [],
       displayType: 1,
-      toggle: ''
+      selectedCat: ''
     }
 
     this.toggleType = this.toggleType.bind(this);
@@ -43,9 +43,9 @@ class Inventory extends Component {
     }
   }
 
-  toggle = (el) => {
+  toggleCat = (el) => {
     this.setState({
-        toggle: el
+        selectedCat: el
     })
 
   }
@@ -84,7 +84,7 @@ class Inventory extends Component {
           <ul>
             { 
               displayCategories.map((category) => {
-                return <InventoryCat category={category} key={category} products={this.props.allInventory} toggle={this.toggle} toggleState={this.state.toggle} changeCart={this.props.changeCart} />
+                return <InventoryCat category={category} key={category} products={this.props.allInventory} toggleCat={this.toggleCat} selectedCat={this.state.selectedCat} changeCart={this.props.changeCart} />
               })
             }
           </ul>

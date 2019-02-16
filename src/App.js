@@ -50,10 +50,23 @@ class App extends Component {
   }
 
 
-  changeCart = (el) => {
-    this.setState({
-      cartItems : this.state.cartItems.concat(el)
-    })
+  changeCart = (item, math) => {
+    if (math === "plusOne") {
+      console.log("add");
+      this.setState({
+        cartItems : this.state.cartItems.concat(item)
+      })
+    } else {
+      console.log("subtract");
+      const allCartItems = this.state.cartItems
+      const foundItem = allCartItems.findIndex(cartItem => {
+        return cartItem === item;
+      });
+      allCartItems.splice(foundItem, 1)
+      this.setState({
+        cartItems: allCartItems
+      })
+    }
   }
 
 
@@ -76,7 +89,7 @@ class App extends Component {
         <div className="Header-container">
           <Header/>
         </div>
-        <div></div>
+        <div></div> 
         <div className="Inventory-container">
           <Inventory allInventory={this.state.allInventory} changeCart={this.changeCart} />
         </div>
