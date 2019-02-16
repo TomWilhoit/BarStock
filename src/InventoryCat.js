@@ -24,7 +24,7 @@ class InventoryCat extends Component {
                 <div className="liquorProd open" onClick={this.toggleProd}>
                     <li className="Category">{this.props.category}</li>
                     <div className="Single-product header"><span>Product</span><span>Price</span><span>Quantity</span></div>
-                    <InventoryProd allProducts={this.props.products} productType={this.props.category} />
+                    <InventoryProd allProducts={this.props.products} productType={this.props.category} changeCart={this.props.changeCart} />
                 </div>
             )
         } else {

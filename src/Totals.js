@@ -8,20 +8,20 @@ class Totals extends Component {
   constructor(props) {
     super(props);
     this.state ={
-      cartObjs: props.cartItems, 
-      cartNew: props.cartMenu
+      // cartObjs: props.cartItems, 
+      // cartNew: props.cartMenu
     }
   }
 
   totalCost = () => {
-    return this.state.cartObjs.reduce((acc, currObj) => {
+    return this.props.cartItems.reduce((acc, currObj) => {
       return acc += currObj.price; 
     }, 0)
   }
 
   totalProfit = () => {
-    return this.state.cartObjs.reduce((acc, currObj) => {
-        let menuObj = this.state.cartNew.find(item => {
+    return this.props.cartItems.reduce((acc, currObj) => {
+        let menuObj = this.props.cartMenu.find(item => {
           return item.inventory_code === currObj.inventory_code;
         });
 
@@ -43,7 +43,9 @@ class Totals extends Component {
         </section>
         <section>
           <h3>Potential Profits</h3>
-          <h2>${(this.totalProfit().toFixed(2)) - this.totalCost()}</h2>
+
+          <h2>${this.totalProfit().toFixed(2)}</h2>
+
         </section>
       </div>
     );
