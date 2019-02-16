@@ -1,4 +1,8 @@
 .Footer p {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
     margin: 0;
     color:#fff;
     padding: .5em;
