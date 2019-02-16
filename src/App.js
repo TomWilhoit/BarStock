@@ -82,10 +82,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Login-container">
           <Login  loginDisplay={this.state.loginDisplay}
                   toggleLogin={this.toggleLogin}/>
-        </div>
         <div className="Header-container">
           <Header/>
         </div>

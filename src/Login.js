@@ -26,6 +26,7 @@ class Login extends Component {
   render() {
   if(this.props.loginDisplay === true){
   return (
+     <div className="Login-container"> 
       <form className="Login">
         <img className="bar-logo" src={BarLogo} alt="Bar Stock"/>
         <p className="login-quote">Making inventory easy for bars, both big and small.</p>
@@ -34,7 +35,8 @@ class Login extends Component {
           <input className="password-input" type="password" placeholder="Password"></input>
           <button className="login-button" onClick={this.handleClick}>Let's get started!</button>
         </div>
-      </form> 
+      </form>
+    </div> 
   )
   }else{
     return (
