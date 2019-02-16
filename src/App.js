@@ -12,60 +12,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      loginDisplay: false,
       allDistributors: [],
       allInventory: [], 
       allMenu: [],
-      cartItems: [{
-        "product": "Fireball",
-        "inventory_code": 10001,
-        "type": "liquor",
-        "category": "whiskey",
-        "price": 18.78,
-        "size": 33.8,
-        "unit": "ounces"
-      },
-      {
-        "product": "Jim Beam",
-        "inventory_code": 10002,
-        "type": "liquor",
-        "category": "whiskey",
-        "price": 16.99,
-        "size": 25.3,
-        "unit": "ounces"
-      },
-      {
-        "product": "Jack Daniels",
-        "inventory_code": 10003,
-        "type": "liquor",
-        "category": "whiskey",
-        "price": 28.80,
-        "size": 33.8,
-        "unit": "ounces"
-      }],
-      cartMenu: [{
-        "product": "Fireball",
-        "inventory_code": 10001,
-        "price_per_drink": 3,
-        "serving_size": 1.5,
-        "unit": "ounces",
-        "tier": "mid"
-      },
-      {
-        "product": "Jim Beam",
-        "inventory_code": 10002,
-        "price_per_drink": 5,
-        "serving_size": 1.5,
-        "unit": "ounces",
-        "tier": "mid"
-      },
-      {
-        "product": "Jack Daniels",
-        "inventory_code": 10003,
-        "price_per_drink": 6,
-        "serving_size": 1.5,
-        "unit": "ounces",
-        "tier": "mid"
-      }],
+      cartItems: [],
+      cartMenu: [], 
       totalCost: 0,
       totalProjected: 0,
       currentUser: ""
@@ -98,25 +50,39 @@ class App extends Component {
   }
 
 
-  toggleAlert() {
-    alert('toggle');
+  changeCart = (el) => {
+    this.setState({
+      cartItems : this.state.cartItems.concat(el)
+    })
   }
 
+
+  toggleLogin = () => {
+    if(this.state.loginDisplay===true){
+    this.setState({loginDisplay:false})
+    }else if(this.state.loginDisplay === false){
+      this.setState({loginDisplay:true})
+    }
+  }
+
+
   render() {
-    // console.log('allProducts ', this.state.allProducts.inventory)
+    console.log(this.state.cartItems);
     return (
       <div className="App">
-        {/* <div className="Login-container">
-          <Login/>
-        </div> */}
+        <div className="Login-container">
+          <Login  loginDisplay={this.state.loginDisplay}
+                  toggleLogin={this.toggleLogin}/>
+        </div>
         <div className="Header-container">
           <Header/>
         </div>
+        <div></div>
         <div className="Inventory-container">
-          <Inventory allInventory={this.state.allInventory}/>
+          <Inventory allInventory={this.state.allInventory} changeCart={this.changeCart} />
         </div>
         <div className="Totals-container">
-          <Totals cartMenu={this.state.cartMenu}
+          <Totals cartMenu={this.state.allMenu}
                   cartItems={this.state.cartItems}
                   />
         </div>
