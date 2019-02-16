@@ -25,9 +25,9 @@ class InventoryProd extends Component {
             <div className="Category-products">
             {
                 boundProps.allProducts.filter(function (inventory) { 
-                    return inventory.category === boundProps.productType;
-                }).map(function (el) {  
-                    return <CartItem el={el} key={el.inventory_code} className="CartItem" changeCart={boundProps.changeCart} />;  
+                    return inventory.category === boundProps.category;
+                }).map(function (product) {  
+                    return <CartItem product={product} key={product.inventory_code} className="CartItem" changeCart={boundProps.changeCart} />;  
                 })
             }
             </div>

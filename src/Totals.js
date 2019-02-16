@@ -39,7 +39,7 @@ class Totals extends Component {
       <div className="Totals">
         <section>
           <h3>Total Cost</h3>
-          <h2>${this.totalCost()}</h2>
+          <h2>${this.totalCost().toFixed(2)}</h2>
         </section>
         <section>
           <h3>Potential Profits</h3>
