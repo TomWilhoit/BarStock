@@ -43,7 +43,9 @@ class Totals extends Component {
         </section>
         <section>
           <h3>Potential Profits</h3>
+
           <h2>${this.totalProfit().toFixed(2)}</h2>
+
         </section>
       </div>
     );

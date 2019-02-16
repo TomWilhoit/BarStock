@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      loginDisplay: false,
+      loginDisplay: true,
       allDistributors: [],
       allInventory: [], 
       allMenu: [],
@@ -67,7 +67,6 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.cartItems);
     return (
       <div className="App">
         <div className="Login-container">
