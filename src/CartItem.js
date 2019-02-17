@@ -34,9 +34,9 @@ class CartItem extends Component {
                 <span>{this.props.product.product}</span>
                 <span>${this.props.product.price}</span>
                 <span>
-                    <button onClick={this.minusProduct}><i className="fas fa-minus-square"></i></button>
+                    <button onClick={this.minusProduct}><i className="fas fa-minus-square icon"></i></button>
                     <span> {this.state.quantity} </span> 
-                    <button onClick={this.addProduct}><i className="fas fa-plus-square"></i></button>
+                    <button onClick={this.addProduct}><i className="fas fa-plus-square icon"></i></button>
                 </span>
             </div>
         ) 
