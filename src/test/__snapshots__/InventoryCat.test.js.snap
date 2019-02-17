@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InventoryCat should match snapshot when all data is passed correctly 1`] = `
+<div
+  className="liquorProd open"
+  onClick={[Function]}
+>
+  <li
+    className="Category"
+  />
+  <div
+    className="Single-product header"
+  >
+    <span>
+      Product
+    </span>
+    <span>
+      Price
+    </span>
+    <span>
+      Quantity
+    </span>
+  </div>
+  <InventoryProd />
+</div>
+`;

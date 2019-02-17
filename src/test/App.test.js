@@ -1,9 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import App from '../App';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+
+describe('App', () => {
+  
+  let wrapper;
+  
+  beforeEach(() => {
+    wrapper = shallow(
+      <App/>
+      )
+    })
+  
+
+
+  it('should match snapshot when all data is passed correctly', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+
+  it('should have a proper default state', () => {
+    expect(wrapper.state()).toEqual({
+      loginDisplay: true,
+      allDistributors: [],
+      allInventory: [], 
+      allMenu: [],
+      cartItems: [],
+      cartMenu: [], 
+      totalCost: 0,
+      totalProjected: 0,
+      currentUser: ""
+      })
+    });
+  
+
+  });
