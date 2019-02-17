@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Totals should match snapshot when all data is passed correctly 1`] = `
+<div
+  className="Totals"
+>
+  <section>
+    <div
+      key="10001"
+    >
+      <span>
+        Fireball
+      </span>
+      <span>
+        $
+        18.78
+      </span>
+      <span>
+        <button
+          onClick={[MockFunction]}
+        >
+          <i
+            className="fas fa-minus-square"
+          />
+        </button>
+      </span>
+    </div>
+    <div
+      key="10002"
+    >
+      <span>
+        Jim Beam
+      </span>
+      <span>
+        $
+        16.99
+      </span>
+      <span>
+        <button
+          onClick={[MockFunction]}
+        >
+          <i
+            className="fas fa-minus-square"
+          />
+        </button>
+      </span>
+    </div>
+  </section>
+  <section>
+    <h3>
+      Total Cost
+    </h3>
+    <h2>
+      $
+      35.77
+    </h2>
+  </section>
+  <section>
+    <h3>
+      Potential Profits
+    </h3>
+    <h2>
+      $
+      116.16
+    </h2>
+  </section>
+</div>
+`;

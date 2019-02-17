@@ -1,10 +1,36 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import Inventory from './Inventory'
+import App from '../App';
+import { shallow } from 'enzyme';
+import Inventory from '../Inventory';
+import mockData from '../mockData';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Inventory/>, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+let allInventory = mockData.distributor;
+
+describe('Inventory', () => {
+  let wrapper;
+  
+  
+  const changeCart = jest.fn();
+  
+  beforeEach(() => {
+    wrapper = shallow(
+      <Inventory allInventory={allInventory} changeCart={changeCart} />
+      )
+    });
+
+    it('should have a proper default state', () => {
+      
+      expect(wrapper.state()).toEqual({
+        allLiquorCats: [],
+        allBeerCats: [],
+        displayType: 1,
+        selectedCat: ''
+        })
+      });
+
+    it('should match snapshot when all data is passed correctly', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    
+  })

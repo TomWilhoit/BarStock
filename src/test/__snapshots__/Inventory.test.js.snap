@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inventory should match snapshot when all data is passed correctly 1`] = `
+<div
+  className="Inventory"
+>
+  <div
+    className="Inventory-toggles"
+  >
+    <a
+      className="toggle-select"
+      id="0"
+      onClick={[Function]}
+    >
+      <h3>
+        <i
+          className="fas fa-beer"
+        />
+         Beer
+      </h3>
+    </a>
+    <a
+      className="toggle-select inactive"
+      id="1"
+      onClick={[Function]}
+    >
+      <h3>
+        <i
+          className="fas fa-glass-whiskey"
+        />
+         Liquor
+      </h3>
+    </a>
+  </div>
+  <div
+    className="Category-display"
+  >
+    <ul />
+  </div>
+</div>
+`;
