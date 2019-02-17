@@ -9,9 +9,11 @@
     list-style-type: none;
     text-align: center;
     padding: .5em;
-    color: #fff;
+    /* color: #fff; */
+    color: #EEAD0E;
     font-family: 'Roboto Condensed', sans-serif;
-    background: #231f20;
+    /* background: #231f20; */
+    background: #ffffff;
     margin: 0;
     text-transform: uppercase;
     font-weight: bold;

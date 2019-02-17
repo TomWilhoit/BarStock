@@ -26,7 +26,8 @@
     cursor: pointer;
     transition: all .5s ease;
     font-family: 'Abel', sans-serif;
-    background: #3ebab4;
+    background: #7d6c54;
+    /* background: #3ebab4; */
 }
 
 /* .toggle-select:hover {
@@ -34,7 +35,8 @@
 } */
 
 .toggle-select.inactive {
-    background: #cccccc;
+    /* background: #cccccc; */
+    background: #1d2023;
 }
 
 

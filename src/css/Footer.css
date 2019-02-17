@@ -4,7 +4,8 @@
     align-items: flex-end;
     
     margin: 0;
-    color:#fff;
+    /* color:#fff; */
+    color: 	#1d2023;
     padding: .5em;
     font-family: 'Abel', sans-serif;
 }

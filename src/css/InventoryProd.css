@@ -25,13 +25,15 @@ Medium Gray #5e666c
 }
 
 .Single-product.header span {
-    color: #4e4e4e;
+    /* color: #4e4e4e; */
+    color: #7d6c54
 }
 
 .Single-product {
     margin: .5em 0 0 0;
     padding: .5em;
-    border-bottom: solid 1px #231f20;
+    /* border-bottom: solid 1px #231f20; */
+    border-bottom: solid 1px #F8DE9E;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: space-between;
@@ -39,6 +41,7 @@ Medium Gray #5e666c
     -webkit-align-items: center;
     align-items: center;
     font-size: .85em;
+    color: #7d6c54;
 }
 
 .Single-product span {
@@ -61,4 +64,8 @@ Medium Gray #5e666c
 .Single-product:last-child {
     border:none;
     margin: .5em 0 .5em 0;
+}
+
+.icon {
+    color: #EEAD0E;
 }

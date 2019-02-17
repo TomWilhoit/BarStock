@@ -10,12 +10,22 @@ Orange #fdba35
 Blue Teal #3ebab4
 Medium Gray #5e666c
 
+NEW PALETTE: 
+Dark Gold: #EEAD0E
+Light Gold: #F8DE9E
+Dark Gray: #bbbbbb
+Light Gray: #cfcfcf
+Brown: #7d6c54
+Black: #1d2023
+White: #ffffff
+
 *********************/
 
 /* #region Global */
 html {
   height: 100%;
   background: #dedede;
+  /* background: #1d2023; */
 }
 
 body {
@@ -34,6 +44,6 @@ body {
   position: relative;
   width: 100%;
   text-align: center;
-  background: #1d2023;
+  /* background: #1d2023; */
 }
 
