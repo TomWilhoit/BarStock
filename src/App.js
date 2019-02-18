@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      loginDisplay: true,
+      loginDisplay: false,
       allDistributors: [],
       allInventory: [], 
       allMenu: [],
@@ -78,28 +78,43 @@ class App extends Component {
 
 
   render() {
-    return (
-      <div className="App">
-          <Login  loginDisplay={this.state.loginDisplay}
-                  toggleLogin={this.toggleLogin}/>
-        <div className="Header-container">
-          <Header/>
+    if (this.state.loginDisplay === true) {
+      return (
+        <div className="App">
+            <Login  loginDisplay={this.state.loginDisplay} toggleLogin={this.toggleLogin} />
         </div>
-        <div></div> 
-        <div className="Inventory-container">
-          <Inventory allInventory={this.state.allInventory} changeCart={this.changeCart} />
+      )
+    } else {
+      return (
+        <div className="App">
+
+          <div className="All-Content">
+
+            <div className="Header-container">
+              <Header />
+            </div>
+            <div className="content-container">
+              <div className="Inventory-container">
+                <Inventory allInventory={this.state.allInventory} changeCart={this.changeCart} />
+              </div>
+              <div className="Totals-container">
+              <Totals cartMenu={this.state.allMenu}
+                      cartItems={this.state.cartItems}
+                      changeCart={this.changeCart}
+                      />
+              </div>
+            </div>
+            <div className="Footer-container">
+              <Footer />
+            </div>
+
+          </div>
+
         </div>
-        <div className="Totals-container">
-          <Totals cartMenu={this.state.allMenu}
-                  cartItems={this.state.cartItems}
-                  changeCart={this.changeCart}
-                  />
-        </div>
-        <div className="Footer-container">
-          <Footer/>
-        </div>
-      </div>
-    )
+      )
+    }
+
+
   }
 }
 

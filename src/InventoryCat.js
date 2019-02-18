@@ -4,33 +4,43 @@ import Inventory from './Inventory.js';
 import InventoryProd from './InventoryProd.js'
 import './css/InventoryCat.css';
 
-
 class InventoryCat extends Component {
     constructor(props) {
         super(props);
         this.state = {
-           
+
         }
     }
-    
+
     displayProds = () => {
         this.props.toggleCat(this.props.category)
     }
-
+    // <section className="product-header">
+    //   <div className="header-title">Product</div>
+    //   <div className="header-title">Price</div>
+    //   <div className="header-title">Quantity</div>
+    // </section>
 
     render() {
         if (this.props.category === this.props.selectedCat) {
             return (
                 <div className="liquorProd open" onClick={this.displayProds}>
-                    <li className="Category">{this.props.category}</li>
-                    <div className="Single-product header"><span>Product</span><span>Price</span><span>Quantity</span></div>
-                    <InventoryProd allProducts={this.props.products} category={this.props.category} changeCart={this.props.changeCart} />
+                    <li className="Category">
+                      <h2 className="Category-titles">{this.props.category}</h2>
+                    </li>
+
+                    <InventoryProd allProducts={this.props.products}
+                                   category={this.props.category}
+                                   changeCart={this.props.changeCart}
+                                   />
                 </div>
             )
         } else {
             return (
                 <div className="liquorProd closed" onClick={this.displayProds}>
-                    <li className="Category">{this.props.category}</li>
+                  <li className="Category">
+                    <h2 className="Category-titles">{this.props.category}</h2>
+                  </li>
                 </div>
             )
         }
@@ -38,5 +48,3 @@ class InventoryCat extends Component {
 }
 
 export default InventoryCat;
-
-                                

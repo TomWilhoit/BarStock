@@ -1,9 +1,8 @@
 /********************
 FONTS
-font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Abel', sans-serif;
 font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Raleway', sans-serif;
 
 COLORS
 Orange #fdba35
@@ -13,25 +12,125 @@ Medium Gray #5e666c
 *********************/
 
 .Totals {
-    margin: auto;
-    background: #cccccc;
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    border:#231f20 solid 1px;
-    padding: 1em 0;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  background: #fff;
+  box-shadow: 0px 1px 7px 0px rgba(35, 31, 32, .2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
-.Totals h3 {
-    font-family: 'Roboto Condensed', sans-serif;
-    text-transform: uppercase;
+.total-label {
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  background: #dadada;
 }
 
-.Totals h2 { 
-    font-family: 'Abel', sans-serif;
+.total-label h3 {
+  color: #2c4969;
+  margin: 0;
+  padding: .2em;
+
+  font-weight: 100;
 }
+
+/* #region Cart Items */
+.cart-display {
+
+}
+
+.cart-products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em .75em;
+  border-bottom: solid 1px #ececec;
+}
+.cart-products:nth-of-type(2n) {
+  background:#f7f7f7cc;
+}
+
+.item-product {
+  width: 55%;
+}
+.item-product h5, .item-price h5 {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  font-size: .8em;
+  font-weight: 100;
+  color: #777777;
+}
+
+.item-price {
+  width: 25%;
+}
+
+.item-delete {
+  line-height: 0;
+}
+.item-delete button {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #0098de;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.item-delete button:hover {
+  color:#dadada;
+}
+
+
+/* #endregion Cart Items */
+
+
+/* #region Totals Sum */
+
+.cost-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background: #ececec;
+}
+
+.total-cost {
+  padding: .5em 1em;
+  background: #2c4969;
+  width: 50%;
+}
+.total-cost h2 {
+  margin: 0;
+  font-family: 'Abel', sans-serif;
+  color:#fff;
+  font-size: 1.3em;
+}
+.total-cost h3 {
+  margin: 0;
+  font-family: 'Abel', sans-serif;
+  color:#fff;
+  font-size: 1.3em;
+  letter-spacing: .01em;
+}
+.returns-cost {
+  padding: .5em 1em;
+  width: 50%;
+}
+.returns-cost h2 {
+  margin: 0;
+  font-weight: 100;
+  font-size: .8em;
+  color:#2c4969;
+  font-family: 'Abel', sans-serif;
+}
+.returns-cost h3 {
+  margin: 0;
+  font-weight: 100;
+  color:#2c4969;
+  font-family: 'Abel', sans-serif;
+}
+
+
+/* #endregion Totals Sum */

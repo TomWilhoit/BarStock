@@ -3,7 +3,6 @@ import App from './App.js';
 import InventoryCat from './InventoryCat.js';
 import './css/Inventory.css';
 
-
 class Inventory extends Component {
   constructor(props) {
     super(props);
@@ -15,15 +14,22 @@ class Inventory extends Component {
     }
 
     this.toggleType = this.toggleType.bind(this);
-    // this.toggleProd = this.toggleProd.bind(this);
   }
 
-  // Not Using
-  displayExample(ex) {
-    return this.props.allInventory.filter(function (cat) { 
-      return cat.category === ex;
-    }).map(function (el) {  
-      return <li key={el.inventory_code}>{el.product}</li>
+  toggleCat = (el) => {
+    this.setState({
+      selectedCat: el
+    })
+  }
+
+  populateType = () => {
+    this.props.allInventory.forEach((product) => {
+      if (!this.state.allLiquorCats.includes(product.category) && product.type === 'liquor') {
+        this.state.allLiquorCats.push(product.category)
+      }
+      if (!this.state.allBeerCats.includes(product.category) && product.type === 'beer') {
+        this.state.allBeerCats.push(product.category)
+      }
     })
   }
 
@@ -31,7 +37,7 @@ class Inventory extends Component {
   toggleType(event) {
     let beerToggle = document.getElementById('0');
     let liquorToggle = document.getElementById('1');
-    
+
     if (this.state.displayType === 0){
       beerToggle.classList.remove('inactive');
       liquorToggle.classList.add('inactive')
@@ -43,24 +49,8 @@ class Inventory extends Component {
     }
   }
 
-  toggleCat = (el) => {
-    this.setState({
-        selectedCat: el
-    })
-
-  }
- 
   render() {
-
-    // Refactor
-    this.props.allInventory.forEach((product) => {
-      if(!this.state.allLiquorCats.includes(product.category) && product.type === 'liquor'){
-        this.state.allLiquorCats.push(product.category)
-      } 
-      if (!this.state.allBeerCats.includes(product.category) && product.type === 'beer') {
-        this.state.allBeerCats.push(product.category)
-      } 
-    })
+    this.populateType();
 
     let displayCategories;
 
@@ -82,9 +72,15 @@ class Inventory extends Component {
         </div>
         <div className="Category-display">
           <ul>
-            { 
+            {
               displayCategories.map((category) => {
-                return <InventoryCat category={category} key={category} products={this.props.allInventory} toggleCat={this.toggleCat} selectedCat={this.state.selectedCat} changeCart={this.props.changeCart} />
+                return <InventoryCat category={category}
+                                      key={category}
+                                      products={this.props.allInventory}
+                                      toggleCat={this.toggleCat}
+                                      selectedCat={this.state.selectedCat}
+                                      changeCart={this.props.changeCart}
+                                    />
               })
             }
           </ul>
