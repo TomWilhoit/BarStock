@@ -1,10 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import Footer from './Footer'
+import App from '../App';
+import { shallow } from 'enzyme';
+import Footer from '../Footer';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Footer/>, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+describe('Footer', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Footer/>
+      )
+    });
+    it('should match snapshot when all data is passed correctly', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+  })

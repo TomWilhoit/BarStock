@@ -34,6 +34,7 @@ class CartItem extends Component {
         let productName = this.props.product.inventory_code
 
         return(
+
             <section className="Single-product" id={this.props.product.inventory_code}>
                 <div className="product-img">
                   <img src={require(`./images/${productName}.png`)} />

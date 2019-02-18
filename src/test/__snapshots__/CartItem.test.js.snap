@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem should match snapshot when all data is passed correctly 1`] = `
+<div
+  className="Single-product"
+  id={10001}
+>
+  <span>
+    Fireball
+  </span>
+  <span>
+    $
+    18.78
+  </span>
+  <span>
+    <button
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-minus-square"
+      />
+    </button>
+    <span>
+       
+      0
+       
+    </span>
+    <button
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-plus-square"
+      />
+    </button>
+  </span>
+</div>
+`;

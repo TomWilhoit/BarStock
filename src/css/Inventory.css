@@ -30,7 +30,8 @@
 }
 
 .toggle-select.inactive {
-    background: #cccccc;
+    /* background: #cccccc; */
+    background: #1d2023;
 }
 
 

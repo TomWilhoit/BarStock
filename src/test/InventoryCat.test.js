@@ -1,15 +1,15 @@
 import React from 'react';
 import App from '../App';
 import { shallow } from 'enzyme';
-import Login from '../Login';
+import InventoryCat from '../InventoryCat';
 
 
-describe('Login', () => {
+describe('InventoryCat', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <Login/>
+      <InventoryCat/>
       )
     });
     it('should match snapshot when all data is passed correctly', () => {

@@ -1,10 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import Header from './Header'
+import App from '../App';
+import { shallow } from 'enzyme';
+import Header from '../Header';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Header/>, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+describe('Header', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(
+        <Header/>
+      )
+    });
+
+    it('should match snapshot when all data is passed correctly', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+  })

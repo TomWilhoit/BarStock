@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InventoryProd should match snapshot when all data is passed correctly 1`] = `
+<div
+  className="Category-products"
+>
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10030"
+    product={
+      Object {
+        "category": "indian pale ale",
+        "inventory_code": 10030,
+        "price": 28,
+        "product": "Oskar Blues Pinner",
+        "size": 24,
+        "type": "beer",
+        "unit": "case",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10034"
+    product={
+      Object {
+        "category": "indian pale ale",
+        "inventory_code": 10034,
+        "price": 32.12,
+        "product": "Lagunitas IPA",
+        "size": 24,
+        "type": "beer",
+        "unit": "case",
+      }
+    }
+  />
+</div>
+`;
