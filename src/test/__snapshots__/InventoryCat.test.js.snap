@@ -2,25 +2,17 @@
 
 exports[`InventoryCat should match snapshot when all data is passed correctly 1`] = `
 <div
-  className="liquorProd open"
+  className="liquorProd closed"
   onClick={[Function]}
 >
   <li
     className="Category"
-  />
-  <div
-    className="Single-product header"
   >
-    <span>
-      Product
-    </span>
-    <span>
-      Price
-    </span>
-    <span>
-      Quantity
-    </span>
-  </div>
-  <InventoryProd />
+    <h2
+      className="Category-titles"
+    >
+      whiskey
+    </h2>
+  </li>
 </div>
 `;

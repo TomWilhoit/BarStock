@@ -51,7 +51,6 @@ class Inventory extends Component {
 
   render() {
     this.populateType();
-
     let displayCategories;
 
     if (this.state.displayType === 0) {

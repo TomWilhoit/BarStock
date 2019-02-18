@@ -8,33 +8,5 @@ exports[`App should match snapshot when all data is passed correctly 1`] = `
     loginDisplay={true}
     toggleLogin={[Function]}
   />
-  <div
-    className="Header-container"
-  >
-    <Header />
-  </div>
-  <div />
-  <div
-    className="Inventory-container"
-  >
-    <Inventory
-      allInventory={Array []}
-      changeCart={[Function]}
-    />
-  </div>
-  <div
-    className="Totals-container"
-  >
-    <Totals
-      cartItems={Array []}
-      cartMenu={Array []}
-      changeCart={[Function]}
-    />
-  </div>
-  <div
-    className="Footer-container"
-  >
-    <Footer />
-  </div>
 </div>
 `;

@@ -15,6 +15,7 @@ class InventoryCat extends Component {
     displayProds = () => {
         this.props.toggleCat(this.props.category)
     }
+
     // <section className="product-header">
     //   <div className="header-title">Product</div>
     //   <div className="header-title">Price</div>

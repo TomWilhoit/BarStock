@@ -1,68 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Totals should match snapshot when all data is passed correctly 1`] = `
-<div
+<article
   className="Totals"
 >
-  <section>
-    <div
-      key="10001"
+  <div
+    className="total-label"
+  >
+    <h3>
+      Current Order
+    </h3>
+  </div>
+  <section
+    className="cart-display"
+  >
+    <section
+      className="cart-products"
+      key="0"
     >
-      <span>
-        Fireball
-      </span>
-      <span>
-        $
-        18.78
-      </span>
-      <span>
+      <div
+        className="item-product"
+      >
+        <h5>
+          1 X 
+          Fireball
+        </h5>
+      </div>
+      <div
+        className="item-price"
+      >
+        <h5>
+          @ $
+          18.78
+        </h5>
+      </div>
+      <div
+        className="item-delete"
+      >
         <button
           onClick={[MockFunction]}
         >
           <i
-            className="fas fa-minus-square"
+            className="fas fa-times"
           />
         </button>
-      </span>
-    </div>
-    <div
-      key="10002"
+      </div>
+    </section>
+    <section
+      className="cart-products"
+      key="1"
     >
-      <span>
-        Jim Beam
-      </span>
-      <span>
-        $
-        16.99
-      </span>
-      <span>
+      <div
+        className="item-product"
+      >
+        <h5>
+          1 X 
+          Jim Beam
+        </h5>
+      </div>
+      <div
+        className="item-price"
+      >
+        <h5>
+          @ $
+          16.99
+        </h5>
+      </div>
+      <div
+        className="item-delete"
+      >
         <button
           onClick={[MockFunction]}
         >
           <i
-            className="fas fa-minus-square"
+            className="fas fa-times"
           />
         </button>
-      </span>
-    </div>
+      </div>
+    </section>
   </section>
-  <section>
-    <h3>
-      Total Cost
-    </h3>
-    <h2>
-      $
-      35.77
-    </h2>
-  </section>
-  <section>
-    <h3>
-      Potential Profits
-    </h3>
-    <h2>
-      $
-      116.16
-    </h2>
-  </section>
-</div>
+  <div
+    className="cost-container"
+  >
+    <section
+      className="returns-cost"
+    >
+      <h2>
+        Potential Returns*
+      </h2>
+      <h3>
+        $
+        116.16
+      </h3>
+    </section>
+    <section
+      className="total-cost"
+    >
+      <h2>
+        Total Cost
+      </h2>
+      <h3>
+        $
+        35.77
+      </h3>
+    </section>
+  </div>
+</article>
 `;
