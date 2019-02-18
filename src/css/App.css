@@ -25,7 +25,7 @@ White: #ffffff
 html {
   height: 100%;
   background: #dedede;
-  /* background: #1d2023; */
+  background: url(./dust_scratches.png);
 }
 
 body {
@@ -34,16 +34,79 @@ body {
 
 /* #endRegion Global */
 
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
+
+.All-Content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 
 .Header-container {
-  padding-bottom: 2em;
+  margin-bottom: 2em;
 }
+
+
+/* #region Content Container  */
+.content-container {
+  display: table;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.Inventory-container {
+  display: table-cell;
+  width: 60%;
+  padding: 0em 0em 0em 2em;
+}
+
+.Totals-container {
+  display: table-cell;
+  width: 40%;
+  padding: 0em 2em 0em 2em;
+  vertical-align: bottom;
+}
+
+/* #endRegion Content Container */
+
+
+
+
 
 .Footer-container {
-  position: relative;
   width: 100%;
   text-align: center;
-  /* background: #1d2023; */
+  margin-top: 2em;
 }
 
+
+
+@media only screen and (max-width: 800px) {
+  .content-container {
+    display: block;
+  }
+  .Inventory-container {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+    padding-bottom: 2em;
+  }
+  .Totals-container {
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+    max-width: 600px;
+  }
+}

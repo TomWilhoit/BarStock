@@ -10,7 +10,6 @@ class Login extends Component {
     super(props);
     this.state = {
       userNameValue : "",
-
     }
   }
 
@@ -22,28 +21,21 @@ class Login extends Component {
     this.setState({userNameValue : userName });
   }
 
-
   render() {
-  if(this.props.loginDisplay === true){
-  return (
-     <div className="Login-container"> 
-      <form className="Login">
-        <img className="bar-logo" src={BarLogo} alt="Bar Stock"/>
-        <p className="login-quote">Making inventory easy for bars, both big and small.</p>
-        <div className="login-form">
-          <input id="userNameID" className="username-input" type="text" placeholder="Username"></input>
-          <input className="password-input" type="password" placeholder="Password"></input>
-          <button className="login-button" onClick={this.handleClick}>Let's get started!</button>
-        </div>
-      </form>
-    </div> 
-  )
-  }else{
     return (
-      <div></div>
-      )
-    }
-  }
+      <div className="Login-container"> 
+        <form className="Login">
+          <img className="bar-logo" src={BarLogo} alt="Bar Stock"/>
+          <p className="login-quote">Making inventory easy for bars, both big and small.</p>
+          <div className="login-form">
+            <input id="userNameID" className="username-input" type="text" placeholder="Username"></input>
+            <input className="password-input" type="password" placeholder="Password"></input>
+            <button className="login-button" onClick={this.handleClick}>Let's get started!</button>
+          </div>
+        </form>
+      </div> 
+    )
+  } 
 }
 
 

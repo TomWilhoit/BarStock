@@ -1,14 +1,10 @@
 
-.Inventory-container {}
-
 .Inventory {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
-    margin: auto;
     background: #ececec;
-    box-shadow: 0px 1px 7px 0px rgba(35, 31, 32, .4);
+    box-shadow: 0px 0px 6px 1px rgba(35, 31, 32, .2);
 }
 
 .Inventory-toggles {
@@ -26,13 +22,12 @@
     cursor: pointer;
     transition: all .5s ease;
     font-family: 'Abel', sans-serif;
-    background: #7d6c54;
-    /* background: #3ebab4; */
+    background: #2c4969;
 }
 
-/* .toggle-select:hover {
-    background: #cccccc;
-} */
+.toggle-select.inactive:hover {
+    background: #2c4969;
+}
 
 .toggle-select.inactive {
     /* background: #cccccc; */
@@ -42,7 +37,5 @@
 
 .toggle-select h3 {
     margin: 0;
-    
+
 }
-
-

@@ -10,27 +10,27 @@ class InventoryProd extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // newProps: props
-        }
-        // this.addProduct = this.addProduct.bind(this);
-        // this.minusProduct = this.minusProduct.bind(this);
 
+        }
     }
-    
+
     render() {
-        // console.log(this.state.newProps)
         //IS THIS THE RIGHT WAY TO BIND??
         let boundProps = this.props;
         return (
-            <div className="Category-products">
+            <article className="Category-products">
             {
-                boundProps.allProducts.filter(function (inventory) { 
+                boundProps.allProducts.filter(function (inventory) {
                     return inventory.category === boundProps.category;
-                }).map(function (product) {  
-                    return <CartItem product={product} key={product.inventory_code} className="CartItem" changeCart={boundProps.changeCart} />;  
+                }).map(function (product) {
+                    return <CartItem className="CartItem"
+                                    product={product}
+                                    key={product.inventory_code}
+                                    changeCart={boundProps.changeCart}
+                                  />;
                 })
             }
-            </div>
+            </article>
         )
     }
 }
