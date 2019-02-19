@@ -7,32 +7,160 @@ exports[`InventoryProd should match snapshot when all data is passed correctly 1
   <CartItem
     changeCart={[MockFunction]}
     className="CartItem"
-    key="10030"
+    key="10001"
     product={
       Object {
-        "category": "indian pale ale",
-        "inventory_code": 10030,
-        "price": 28,
-        "product": "Oskar Blues Pinner",
-        "size": 24,
-        "type": "beer",
-        "unit": "case",
+        "category": "whiskey",
+        "inventory_code": 10001,
+        "price": 18.78,
+        "product": "Fireball",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
       }
     }
   />
   <CartItem
     changeCart={[MockFunction]}
     className="CartItem"
-    key="10034"
+    key="10002"
     product={
       Object {
-        "category": "indian pale ale",
-        "inventory_code": 10034,
-        "price": 32.12,
-        "product": "Lagunitas IPA",
-        "size": 24,
-        "type": "beer",
-        "unit": "case",
+        "category": "whiskey",
+        "inventory_code": 10002,
+        "price": 16.99,
+        "product": "Jim Beam",
+        "size": 25.3,
+        "type": "liquor",
+        "unit": "ounces",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10003"
+    product={
+      Object {
+        "category": "whiskey",
+        "inventory_code": 10003,
+        "price": 28.8,
+        "product": "Jack Daniels",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10004"
+    product={
+      Object {
+        "category": "whiskey",
+        "inventory_code": 10004,
+        "price": 30.3,
+        "product": "Bullit",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10005"
+    product={
+      Object {
+        "category": "whiskey",
+        "inventory_code": 10005,
+        "price": 31.88,
+        "product": "Jameson",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10006"
+    product={
+      Object {
+        "category": "whiskey",
+        "inventory_code": 10006,
+        "price": 28.57,
+        "product": "Leopold",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10007"
+    product={
+      Object {
+        "category": "whiskey",
+        "inventory_code": 10007,
+        "price": 36.71,
+        "product": "Makers Mark",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10008"
+    product={
+      Object {
+        "category": "whiskey",
+        "inventory_code": 10008,
+        "price": 23.7,
+        "product": "Tincup",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10009"
+    product={
+      Object {
+        "category": "whiskey",
+        "inventory_code": 10009,
+        "price": 8.21,
+        "product": "Kentucky Deluxe",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
+      }
+    }
+  />
+  <CartItem
+    changeCart={[MockFunction]}
+    className="CartItem"
+    key="10010"
+    product={
+      Object {
+        "category": "whiskey",
+        "inventory_code": 10010,
+        "price": 8.21,
+        "product": "McCormicks Vodka",
+        "size": 33.8,
+        "type": "liquor",
+        "unit": "ounces",
       }
     }
   />
