@@ -83,6 +83,13 @@ class App extends Component {
     this.setState({
       finalOrder: true
     })
+  } 
+
+  
+  loginAccount = (userNameValue) => {
+    this.setState({
+      currentUser : userNameValue
+    })
   }
 
 
@@ -95,6 +102,7 @@ class App extends Component {
         <div className="App">
             <Login  loginDisplay={this.state.loginDisplay}
                     toggleLogin={this.toggleLogin}
+                    loginAccount={this.loginAccount}
                   />
         </div>
       )
@@ -111,14 +119,14 @@ class App extends Component {
         <div className="App">
           <div className="All-Content">
             <div className="Header-container">
-              <Header />
+              <Header 
+              currentUser={this.state.currentUser}/>
             </div>
             <div className="content-container">
               <div className="Inventory-container">
-                <Inventory allInventory={this.state.allInventory}
-                           changeCart={this.changeCart}
-                           cartItems={this.state.cartItems}
-                          />
+                <Inventory  allInventory={this.state.allInventory}
+                            changeCart={this.changeCart}
+                            cartItems={this.state.cartItems}/>
               </div>
               <div className="Totals-container">
                 <Totals cartMenu={this.state.allMenu}
