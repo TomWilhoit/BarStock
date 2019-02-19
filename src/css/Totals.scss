@@ -36,7 +36,8 @@ Medium Gray #5e666c
 
 /* #region Cart Items */
 .cart-display {
-
+  overflow-y: scroll;
+  max-height: 250px;
 }
 
 .cart-products {
@@ -101,37 +102,41 @@ Medium Gray #5e666c
   padding: .5em 1em;
   background: #2c4969;
   width: 50%;
+
+  h2 {
+   margin: 0;
+   font-family: 'Abel', sans-serif;
+   color:#fff;
+   font-size: 1.3em;
+ }
+
+ h3 {
+   margin: 0;
+   font-family: 'Abel', sans-serif;
+   color:#fff;
+   font-size: 1.3em;
+   letter-spacing: .01em;
+ }
 }
-.total-cost h2 {
-  margin: 0;
-  font-family: 'Abel', sans-serif;
-  color:#fff;
-  font-size: 1.3em;
-}
-.total-cost h3 {
-  margin: 0;
-  font-family: 'Abel', sans-serif;
-  color:#fff;
-  font-size: 1.3em;
-  letter-spacing: .01em;
-}
+
 .returns-cost {
   padding: .5em 1em;
   width: 50%;
-}
-.returns-cost h2 {
-  margin: 0;
-  font-weight: 100;
-  font-size: .8em;
-  color:#2c4969;
-  font-family: 'Abel', sans-serif;
-}
-.returns-cost h3 {
-  margin: 0;
-  font-weight: 100;
-  color:#2c4969;
-  font-family: 'Abel', sans-serif;
-}
 
+  h2 {
+    margin: 0;
+    font-weight: 100;
+    font-size: .8em;
+    color:#2c4969;
+    font-family: 'Abel', sans-serif;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 100;
+    color:#2c4969;
+    font-family: 'Abel', sans-serif;
+  }
+}
 
 /* #endregion Totals Sum */

@@ -5,6 +5,7 @@ import Totals from './Totals.js';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Login from './Login.js';
+import Order from './Order.js';
 
 
 
@@ -20,7 +21,8 @@ class App extends Component {
       cartMenu: [],
       totalCost: 0,
       totalProjected: 0,
-      currentUser: ""
+      currentUser: "",
+      finalOrder: false
     }
   }
 
@@ -77,8 +79,17 @@ class App extends Component {
     }
   }
 
+  submitOrder = () => {
+    this.setState({
+      finalOrder: true
+    })
+  }
+
 
   render() {
+    let submitClass = "disabled";
+    this.state.cartItems.length >= 1 ? submitClass = "enabled" : submitClass = "disabled"
+
     if (this.state.loginDisplay === true) {
       return (
         <div className="App">
@@ -87,12 +98,18 @@ class App extends Component {
                   />
         </div>
       )
+    } else if (this.state.finalOrder === true) {
+      return (
+        <div className="App">
+            <Order  cartItems={this.state.cartItems}
+                    user={this.state.currentUser}
+                  />
+        </div>
+      )
     } else {
       return (
         <div className="App">
-
           <div className="All-Content">
-
             <div className="Header-container">
               <Header />
             </div>
@@ -104,18 +121,19 @@ class App extends Component {
                           />
               </div>
               <div className="Totals-container">
-              <Totals cartMenu={this.state.allMenu}
-                      cartItems={this.state.cartItems}
-                      changeCart={this.changeCart}
+                <Totals cartMenu={this.state.allMenu}
+                        cartItems={this.state.cartItems}
+                        changeCart={this.changeCart}
                       />
+                <section className="Submit-order">
+                  <button className={submitClass} onClick={this.submitOrder}>Place Order</button>
+                </section>
               </div>
             </div>
             <div className="Footer-container">
               <Footer />
             </div>
-
           </div>
-
         </div>
       )
     }

@@ -41,7 +41,6 @@ class Totals extends Component {
         let mPrice = menuObj.price_per_drink; // Menu Product Price Per Drink
         let dCost = currObj.price; // Distributor Product Cost
         return acc += (((dSize/mSize) * mPrice) - dCost);
-
     }, 0)
   }
 
