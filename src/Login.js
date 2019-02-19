@@ -19,6 +19,7 @@ class Login extends Component {
     this.setState({
       [name] : value
     })
+    this.props.loginAccount(this.state.userNameValue)
   }
 
   handleClick = (e) => { 

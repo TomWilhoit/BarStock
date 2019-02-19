@@ -5,11 +5,14 @@ import './css/Header.scss';
 
 import BarLogo from './BarStock_Logo.png'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="Header">
       <div className="logo-container">
         <img src={BarLogo} alt="Bar Stock"/>
+      </div>
+      <div className="welcome-message">
+        Welcome Back {props.currentUser}! Account# 1811FE
       </div>
     </div>
   );
