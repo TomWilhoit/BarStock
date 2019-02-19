@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MockData from './mockData.js';
 import App from './App.js';
 import Inventory from './Inventory';
-import './css/Totals.css';
+import './css/Totals.scss';
 
 class Totals extends Component {
   constructor(props) {

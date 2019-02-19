@@ -3,7 +3,7 @@ import App from './App.js';
 import Inventory from './Inventory.js';
 import InventoryCats from './InventoryCat.js';
 import CartItem from './CartItem.js';
-import './css/InventoryProd.css';
+import './css/InventoryProd.scss';
 
 
 class InventoryProd extends Component {
