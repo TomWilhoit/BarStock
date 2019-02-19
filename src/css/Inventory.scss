@@ -16,26 +16,25 @@
     text-align: center;
     width: 50%;
     color: #fff;
-    padding: 1em;
+    padding: .75em;
+    font-size: .9em;
     font-weight: bold;
     text-transform: uppercase;
+    outline:none;
     cursor: pointer;
     transition: all .5s ease;
     font-family: 'Abel', sans-serif;
     background: #2c4969;
 }
 
+.toggle-select.inactive {
+    background: #1d2023;
+}
+
 .toggle-select.inactive:hover {
     background: #2c4969;
 }
 
-.toggle-select.inactive {
-    /* background: #cccccc; */
-    background: #1d2023;
-}
-
-
 .toggle-select h3 {
     margin: 0;
-
 }
