@@ -67,6 +67,7 @@ class Inventory extends Component {
                             toggleCat={this.toggleCat}
                             selectedCat={this.state.selectedCat}
                             changeCart={this.props.changeCart}
+                            cartItems = {this.props.cartItems}
                           />
     })
 
