@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import App from './App.js';
 import InventoryCat from './InventoryCat.js';
-import './css/Inventory.css';
+import './css/Inventory.scss';
 
 class Inventory extends Component {
   constructor(props) {

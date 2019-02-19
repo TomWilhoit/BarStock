@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MockData from './mockData.js';
 import App from './App.js';
-import './css/Header.css';
+import './css/Header.scss';
 
 import BarLogo from './BarStock_Logo.png'
 

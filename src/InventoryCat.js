@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import App from './App.js';
 import Inventory from './Inventory.js';
 import InventoryProd from './InventoryProd.js'
-import './css/InventoryCat.css';
+import './css/InventoryCat.scss';
 
 class InventoryCat extends Component {
     constructor(props) {

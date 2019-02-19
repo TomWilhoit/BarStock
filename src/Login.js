@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MockData from './mockData.js';
 import App from './App.js';
 import BarLogo from './BarStock_Logo.png'
-import './css/Login.css';
+import './css/Login.scss';
 
 
 class Login extends Component {

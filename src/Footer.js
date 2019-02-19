@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MockData from './mockData.js';
 import App from './App.js';
-import './css/Footer.css';
+import './css/Footer.scss';
 
 const Footer = () => {
   return (
