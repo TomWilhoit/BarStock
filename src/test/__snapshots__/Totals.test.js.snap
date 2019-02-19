@@ -22,7 +22,6 @@ exports[`Totals should match snapshot when all data is passed correctly 1`] = `
         className="item-product"
       >
         <h5>
-          1 X 
           Fireball
         </h5>
       </div>
@@ -38,7 +37,7 @@ exports[`Totals should match snapshot when all data is passed correctly 1`] = `
         className="item-delete"
       >
         <button
-          onClick={[MockFunction]}
+          onClick={[Function]}
         >
           <i
             className="fas fa-times"
@@ -54,7 +53,6 @@ exports[`Totals should match snapshot when all data is passed correctly 1`] = `
         className="item-product"
       >
         <h5>
-          1 X 
           Jim Beam
         </h5>
       </div>
@@ -70,7 +68,7 @@ exports[`Totals should match snapshot when all data is passed correctly 1`] = `
         className="item-delete"
       >
         <button
-          onClick={[MockFunction]}
+          onClick={[Function]}
         >
           <i
             className="fas fa-times"

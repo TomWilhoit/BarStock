@@ -43,7 +43,6 @@ class CartItem extends Component {
 
 
     render() {
-      // console.log(this.state.quantity);
         let productName = this.props.product.inventory_code
         return(
             <section className="Single-product" id={this.props.product.inventory_code}>
