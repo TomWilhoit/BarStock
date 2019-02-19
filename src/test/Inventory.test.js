@@ -4,7 +4,8 @@ import { shallow } from 'enzyme';
 import Inventory from '../Inventory';
 import mockData from '../mockData';
 
-let allInventory = mockData.distributor;
+let defaultInventory = mockData.distributor;
+let allInventory = mockData.distributor[0].inventory;
 
 describe('Inventory', () => {
   let wrapper;
@@ -12,14 +13,16 @@ describe('Inventory', () => {
   
   const changeCart = jest.fn();
   
-  beforeEach(() => {
-    wrapper = shallow(
-      <Inventory allInventory={allInventory} changeCart={changeCart} />
-      )
-    });
+  // beforeEach(() => {
+  //   wrapper = shallow(
+  //     <Inventory allInventory={defaultInventory} changeCart={changeCart} />
+  //     )
+  //   });
 
     it('should have a proper default state', () => {
-      
+      wrapper = shallow(
+        <Inventory allInventory={defaultInventory} changeCart={changeCart} />
+        )
       expect(wrapper.state()).toEqual({
         allLiquorCats: [],
         allBeerCats: [],
@@ -32,5 +35,27 @@ describe('Inventory', () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    
+    //toggleCat
+    it('should update the category selection when toggleCat is called', () => {
+      expect(wrapper.state('selectedCat')).toEqual('');
+      wrapper.instance().toggleCat(allInventory[0].category);
+      expect(wrapper.state('selectedCat')).toEqual('whiskey');
+    });
+
+    //populateType
+    it('should update allLiquorCats with all liquor products', () => {
+      wrapper = shallow(
+        <Inventory allInventory={allInventory} changeCart={changeCart} />
+        )
+      wrapper.instance().populateType();
+      expect(wrapper.state('allLiquorCats')).toEqual(["whiskey", "vodka", "tequilla", "rum", "gin"])
+    });
+
+    it('should update allBeerCats with all beer products', () => {
+      wrapper = shallow(
+        <Inventory allInventory={allInventory} changeCart={changeCart} />
+        )
+      wrapper.instance().populateType();
+      expect(wrapper.state('allBeerCats')).toEqual(["lager", "pilsner", "indian pale ale", "pale ale", "sour"])
+    })
   })

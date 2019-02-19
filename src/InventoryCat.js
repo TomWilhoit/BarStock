@@ -16,6 +16,7 @@ class InventoryCat extends Component {
         this.props.toggleCat(this.props.category)
     }
 
+
     render() {
         if (this.props.category === this.props.selectedCat) {
             return (
