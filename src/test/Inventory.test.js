@@ -26,7 +26,7 @@ describe('Inventory', () => {
       expect(wrapper.state()).toEqual({
         allLiquorCats: [],
         allBeerCats: [],
-        displayType: 1,
+        displayType: 'beer',
         selectedCat: ''
         })
       });

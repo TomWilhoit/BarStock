@@ -23,13 +23,19 @@ exports[`Login should match snapshot when all data is passed correctly 1`] = `
       <input
         className="username-input"
         id="userNameID"
+        name="userNameValue"
+        onChange={[Function]}
         placeholder="Username"
         type="text"
+        value=""
       />
       <input
         className="password-input"
+        name="passwordValue"
+        onChange={[Function]}
         placeholder="Password"
         type="password"
+        value=""
       />
       <button
         className="login-button"

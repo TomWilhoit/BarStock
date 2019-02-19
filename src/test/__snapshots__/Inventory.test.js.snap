@@ -7,8 +7,8 @@ exports[`Inventory should match snapshot when all data is passed correctly 1`] =
   <div
     className="Inventory-toggles"
   >
-    <a
-      className="toggle-select"
+    <button
+      className="toggle-select active"
       id="0"
       onClick={[Function]}
     >
@@ -18,8 +18,8 @@ exports[`Inventory should match snapshot when all data is passed correctly 1`] =
         />
          Beer
       </h3>
-    </a>
-    <a
+    </button>
+    <button
       className="toggle-select inactive"
       id="1"
       onClick={[Function]}
@@ -30,7 +30,7 @@ exports[`Inventory should match snapshot when all data is passed correctly 1`] =
         />
          Liquor
       </h3>
-    </a>
+    </button>
   </div>
   <div
     className="Category-display"
