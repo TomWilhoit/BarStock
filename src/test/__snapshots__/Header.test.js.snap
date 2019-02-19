@@ -12,5 +12,11 @@ exports[`Header should match snapshot when all data is passed correctly 1`] = `
       src="BarStock_Logo.png"
     />
   </div>
+  <div
+    className="welcome-message"
+  >
+    Welcome Back 
+    ! Account# 1811FE
+  </div>
 </div>
 `;

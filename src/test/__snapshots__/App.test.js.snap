@@ -5,6 +5,7 @@ exports[`App should match snapshot when all data is passed correctly 1`] = `
   className="App"
 >
   <Login
+    loginAccount={[Function]}
     loginDisplay={true}
     toggleLogin={[Function]}
   />
