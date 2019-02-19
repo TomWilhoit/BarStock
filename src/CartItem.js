@@ -14,27 +14,38 @@ class CartItem extends Component {
     addProduct = event => {
         this.props.changeCart(this.props.product, "plusOne");
         const increaseQuantity = {
-            quantity: this.state.quantity + 1
+          quantity: this.state.quantity + 1
         }
         this.setState(increaseQuantity)
     }
 
     minusProduct = event => {
         if (this.state.quantity > 0) {
-        this.props.changeCart(this.props.product, "minusOne");
-        const decreaseQuantity = {
+          this.props.changeCart(this.props.product, "minusOne");
+          const decreaseQuantity = {
             quantity: this.state.quantity - 1
-        }
-        this.setState(decreaseQuantity)
+          }
+          this.setState(decreaseQuantity)
         }
     }
 
+    currQuantity = () => {
+      let currNum = this.props.cartItems.reduce((acc, prod) => {
+          if(prod.inventory_code === this.props.product.inventory_code){
+            acc++
+          }
+          return acc
+      }, 0);
+      this.state.quantity = currNum;
+      return this.state.quantity
+    }
+
+
+
     render() {
-
+      // console.log(this.state.quantity);
         let productName = this.props.product.inventory_code
-
         return(
-
             <section className="Single-product" id={this.props.product.inventory_code}>
                 <div className="product-img">
                   <img src={require(`./images/${productName}.png`)} />
@@ -48,7 +59,7 @@ class CartItem extends Component {
                     <button onClick={this.minusProduct}>
                       <i className="fas fa-minus"></i>
                     </button>
-                    <div className="amount">{this.state.quantity}</div>
+                    <div className="amount">{this.currQuantity()}</div>
                     <button onClick={this.addProduct}>
                       <i className="fas fa-plus"></i>
                     </button>
@@ -57,7 +68,6 @@ class CartItem extends Component {
                 </div>
             </section>
         )
-
     }
 }
 

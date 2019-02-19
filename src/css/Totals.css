@@ -76,6 +76,7 @@ Medium Gray #5e666c
   color: #0098de;
   cursor: pointer;
   transition: all .3s ease;
+  outline:none;
 }
 .item-delete button:hover {
   color:#dadada;

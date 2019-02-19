@@ -27,6 +27,7 @@ class InventoryProd extends Component {
                                     product={product}
                                     key={product.inventory_code}
                                     changeCart={boundProps.changeCart}
+                                    cartItems={boundProps.cartItems}
                                   />;
                 })
             }
