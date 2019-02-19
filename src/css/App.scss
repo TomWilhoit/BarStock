@@ -10,7 +10,7 @@ Orange #fdba35
 Blue Teal #3ebab4
 Medium Gray #5e666c
 
-NEW PALETTE: 
+NEW PALETTE:
 Dark Gold: #EEAD0E
 Light Gold: #F8DE9E
 Dark Gray: #bbbbbb
@@ -81,7 +81,29 @@ body {
 /* #endRegion Content Container */
 
 
-
+.Submit-order {
+  button {
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    background: #EEAD0E;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1em;
+    padding: .2em;
+    font-family: 'Abel', sans-serif;
+    cursor: pointer;
+    &.disabled {
+      pointer-events: none;
+      opacity: .2;
+    }
+    &.enabled {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+}
 
 
 .Footer-container {
