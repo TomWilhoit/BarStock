@@ -7,18 +7,18 @@ import './css/Totals.css';
 class Totals extends Component {
   constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
     }
   }
 
   displayCart = () => {
     return this.props.cartItems.map((item, index) => {
       return <section className="cart-products" key={index}>
-        <div className="item-product"><h5>1 X {item.product}</h5></div>
+        <div className="item-product"><h5>{item.product}</h5></div>
         <div className="item-price"><h5>@ ${item.price.toFixed(2)}</h5></div>
         <div className="item-delete">
-          <button onClick={this.props.changeCart}>
-            <i className="fas fa-times" ></i>
+          <button onClick={() => this.props.changeCart(item)}>
+            <i className="fas fa-times"></i>
           </button>
         </div>
       </section>
@@ -46,6 +46,7 @@ class Totals extends Component {
   }
 
   render() {
+
     return (
       <article className="Totals">
         <div className="total-label">
@@ -66,6 +67,7 @@ class Totals extends Component {
         </div>
       </article>
     );
+
   }
 };
 

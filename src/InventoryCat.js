@@ -15,11 +15,6 @@ class InventoryCat extends Component {
     displayProds = () => {
         this.props.toggleCat(this.props.category)
     }
-    // <section className="product-header">
-    //   <div className="header-title">Product</div>
-    //   <div className="header-title">Price</div>
-    //   <div className="header-title">Quantity</div>
-    // </section>
 
     render() {
         if (this.props.category === this.props.selectedCat) {
@@ -32,6 +27,7 @@ class InventoryCat extends Component {
                     <InventoryProd allProducts={this.props.products}
                                    category={this.props.category}
                                    changeCart={this.props.changeCart}
+                                   cartItems={this.props.cartItems}
                                    />
                 </div>
             )

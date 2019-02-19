@@ -74,12 +74,12 @@ class Inventory extends Component {
           <ul>
             {
               displayCategories.map((category) => {
-                return <InventoryCat category={category}
-                                      key={category}
+                return <InventoryCat  category={category} key={category}
                                       products={this.props.allInventory}
                                       toggleCat={this.toggleCat}
                                       selectedCat={this.state.selectedCat}
                                       changeCart={this.props.changeCart}
+                                      cartItems={this.props.cartItems}
                                     />
               })
             }

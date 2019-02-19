@@ -14,10 +14,10 @@ class App extends Component {
     this.state = {
       loginDisplay: false,
       allDistributors: [],
-      allInventory: [], 
+      allInventory: [],
       allMenu: [],
       cartItems: [],
-      cartMenu: [], 
+      cartMenu: [],
       totalCost: 0,
       totalProjected: 0,
       currentUser: ""
@@ -55,7 +55,7 @@ class App extends Component {
     if (math === "plusOne") {
       allCartItems.push(item);
       this.setState({
-        cartItems : allCartItems
+        cartItems: allCartItems
       })
     } else {
       const foundItem = allCartItems.findIndex(cartItem => {
@@ -68,11 +68,12 @@ class App extends Component {
     }
   }
 
+
   toggleLogin = () => {
-    if(this.state.loginDisplay===true){
-    this.setState({loginDisplay:false})
-    }else if(this.state.loginDisplay === false){
-      this.setState({loginDisplay:true})
+    if(this.state.loginDisplay === true) {
+      this.setState({loginDisplay: false})
+    } else if(this.state.loginDisplay === false) {
+      this.setState({loginDisplay: true})
     }
   }
 
@@ -81,7 +82,9 @@ class App extends Component {
     if (this.state.loginDisplay === true) {
       return (
         <div className="App">
-            <Login  loginDisplay={this.state.loginDisplay} toggleLogin={this.toggleLogin} />
+            <Login  loginDisplay={this.state.loginDisplay}
+                    toggleLogin={this.toggleLogin}
+                  />
         </div>
       )
     } else {
@@ -95,7 +98,10 @@ class App extends Component {
             </div>
             <div className="content-container">
               <div className="Inventory-container">
-                <Inventory allInventory={this.state.allInventory} changeCart={this.changeCart} />
+                <Inventory allInventory={this.state.allInventory}
+                           changeCart={this.changeCart}
+                           cartItems={this.state.cartItems}
+                          />
               </div>
               <div className="Totals-container">
               <Totals cartMenu={this.state.allMenu}
