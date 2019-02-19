@@ -24,8 +24,11 @@ class Login extends Component {
 
   handleClick = (e) => { 
     e.preventDefault();
+    if(this.state.userNameValue.length > 0 && this.state.passwordValue.length > 0){
     this.props.toggleLogin();
-
+    }else{
+      alert('Please enter a Username and Password')
+    }
   }
 
   render() {
