@@ -44,7 +44,6 @@ Medium Gray #5e666c
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-items: center;
   padding: .5em .75em;
   border-bottom: solid 1px #ececec;
 }
@@ -53,9 +52,11 @@ Medium Gray #5e666c
 }
 
 .item-product {
-  width: 55%;
+  width: 50%;
 }
-.item-product h5, .item-price h5 {
+.item-product h5, 
+.item-price h5, 
+.item-quantity h5 {
   font-family: 'Lato', sans-serif;
   margin: 0;
   font-size: .8em;
@@ -63,8 +64,9 @@ Medium Gray #5e666c
   color: #777777;
 }
 
-.item-price {
-  width: 25%;
+.item-price,
+.item-quantity {
+  width: 20%;
 }
 
 .item-delete {

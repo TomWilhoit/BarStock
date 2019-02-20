@@ -48,11 +48,11 @@ class CartItem extends Component {
         return(
             <section className="Single-product" id={this.props.product.inventory_code}>
                 <div className="product-img">
-                  {/* <img src={require(`./images/${productName}.png`)} /> */}
+                  <img src={require(`./images/${productName}.png`)} />
                 </div>
                 <div className="product-info">
                   <h4>{this.props.product.product}</h4>
-                  <h5>Price Per: <span>${this.props.product.price.toFixed(2)}</span></h5>
+                  <h5><span>{this.props.product.size} {this.props.product.unit} / ${this.props.product.price.toFixed(2)}</span></h5>
                 </div>
                 <div className="product-quantity">
                   <section className="quantity-amount">
