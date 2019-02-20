@@ -14,6 +14,7 @@ describe('Login', () => {
         handleEvent = {mockFunc}
         handleClick = {mockFunc}  
         toggleLogin = {mockFunc}
+        loginAccount = {mockFunc}
       />
       )
     });

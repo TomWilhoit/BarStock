@@ -43,11 +43,12 @@ class CartItem extends Component {
 
 
     render() {
-        let productName = this.props.product.inventory_code
+        let productName = this.props.product.inventory_code;
+        
         return(
             <section className="Single-product" id={this.props.product.inventory_code}>
                 <div className="product-img">
-                  <img src={require(`./images/${productName}.png`)} />
+                  {/* <img src={require(`./images/${productName}.png`)} /> */}
                 </div>
                 <div className="product-info">
                   <h4>{this.props.product.product}</h4>
