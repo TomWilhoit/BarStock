@@ -3,6 +3,7 @@ import App from '../App';
 import { shallow } from 'enzyme';
 import CartItem from '../CartItem';
 
+//We commented out the <img src={require}> on line 51 of CartItem.js
 
 describe('CartItem', () => {
   let product = {
