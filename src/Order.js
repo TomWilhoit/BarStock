@@ -6,6 +6,9 @@ import './css/Order.scss';
 class Order extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      orderComplete: false
+    }
   }
 
   displayObjects = () => {
@@ -25,26 +28,38 @@ class Order extends Component {
   }
 
   send = () => {
-    var link = "mailto:michaelryankrog@gmail.com"
-           + "&subject=" + escape("This is my subject")
-           + "&body=" + escape(document.getElementById('myText').innerText)
-  ;
-    window.location.href = link;
+  //   var link = "mailto:michaelryankrog@gmail.com"
+  //          + "&subject=" + escape("This is my subject")
+  //          + "&body=" + escape(document.getElementById('myText').innerText)
+  // ;
+  //   window.location.href = link;
+    this.setState({
+      orderComplete: true
+    })
   }
 
 
   render() {
-    return (
-      <div className="Order-container">
-        <form className="Order">
-          <h3 className="order-quote">Confirmation {this.props.user}</h3>
-          <div id="myText" className="order-form">
-            {this.displayObjects()}
-          </div>
-          <button className="order-button" onClick={this.send}>Submit Order</button>
-        </form>
-      </div>
-    );
+    if (this.state.orderComplete === true) {
+      return (
+        <div className="Order">
+          <h3>Thanks for your order!</h3>
+        </div>
+      )} else {
+      return (
+        <div className="Order-container">
+          <form className="Order">
+            <h3 className="order-quote">Confirmation {this.props.user}</h3>
+            <div id="myText" className="order-form">
+              {this.displayObjects()}
+            </div>
+            <h3>Total ${this.props.finalTotal.toFixed(2)}</h3>
+            <button className="order-button" onClick={this.send}>Submit Order</button>
+            <button className="back-button" onClick={this.props.backToCart}>Back to Cart</button>
+          </form>
+        </div>
+      );
+    }
   }
 };
 

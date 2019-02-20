@@ -27,10 +27,15 @@
     z-index: 999;
     h3 {
       margin: 0;
+      background-color: #11212a;
       color: #fff;
       text-transform: uppercase;
-      margin-bottom: 1em;
+      // margin-bottom: 1em;
       font-family: 'Abel', sans-serif;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      padding-left: 1em;
     }
     .order-form {
       width: 300px;
@@ -51,7 +56,13 @@
       }
     }
 
-    .order-button {
+    .thank-you {
+      width: 300px;
+      background: #fff;
+    }
+
+    .order-button,
+    .back-button {
       margin-top: 1em;
       height: 30px;
       border-radius: 5px;

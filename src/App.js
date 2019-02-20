@@ -20,7 +20,7 @@ class App extends Component {
       cartItems: [],
       cartMenu: [],
       totalCost: 0,
-      totalProjected: 0,
+      // totalProjected: 0,
       currentUser: "",
       finalOrder: false
     }
@@ -53,19 +53,24 @@ class App extends Component {
 
 
   changeCart = (item, math) => {
-    const allCartItems = this.state.cartItems
+    const allCartItems = this.state.cartItems;
+    let totalCost = this.state.totalCost;
     if (math === "plusOne") {
+      totalCost += item.price;
       allCartItems.push(item);
       this.setState({
-        cartItems: allCartItems
+        cartItems: allCartItems,
+        totalCost: totalCost
       })
     } else {
       const foundItem = allCartItems.findIndex(cartItem => {
         return cartItem === item;
       });
+      totalCost -= allCartItems[foundItem].price
       allCartItems.splice(foundItem, 1)
       this.setState({
-        cartItems: allCartItems
+        cartItems: allCartItems,
+        totalCost: totalCost
       })
     }
   }
@@ -82,6 +87,13 @@ class App extends Component {
   submitOrder = () => {
     this.setState({
       finalOrder: true
+    })
+  } 
+
+  backToCart = () => {
+    this.setState({
+      finalOrder: false,
+      loginDisplay: false
     })
   } 
 
@@ -111,6 +123,8 @@ class App extends Component {
         <div className="App">
             <Order  cartItems={this.state.cartItems}
                     user={this.state.currentUser}
+                    finalTotal={this.state.totalCost}
+                    backToCart={this.backToCart}
                   />
         </div>
       )
@@ -134,7 +148,7 @@ class App extends Component {
                         changeCart={this.changeCart}
                       />
                 <section className="Submit-order">
-                  <button className={submitClass} onClick={this.submitOrder}>Place Order</button>
+                  <button className={submitClass} onClick={this.submitOrder}>Checkout</button>
                 </section>
               </div>
             </div>

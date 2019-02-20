@@ -30,7 +30,8 @@ describe('App', () => {
       cartMenu: [], 
       totalCost: 0,
       totalProjected: 0,
-      currentUser: ""
+      currentUser: "",
+      finalOrder: false
       })
     });
 
@@ -40,15 +41,66 @@ describe('App', () => {
     expect(wrapper.state('loginDisplay')).toEqual(false);
     })
 
-    it('should change the state of loginDisplay when invoked', () => {
+    it('should change the state of loginAccount when invoked', () => {
       expect(wrapper.state('currentUser')).toEqual('');
       wrapper.instance().loginAccount('dang');
       expect(wrapper.state('currentUser')).toEqual('dang');
-      })
+    })
 
-    // it('should alter the items displayed in your cart ', () => {
-    //   expect(wrapper.state('cartItems')).toEqual([]);
-    //   wrapper.instance().changeCart();
-    //   expect(wrapper.state('loginDisplay')).toEqual(false);
-    //   })
+    it('should change the state of finalOrder when invoked', () => {
+      expect(wrapper.state('finalOrder')).toEqual(false);
+      wrapper.instance().submitOrder();
+      expect(wrapper.state('finalOrder')).toEqual(true);
+    })
+
+    it('should add items to your cart ', () => {
+      expect(wrapper.state('cartItems')).toEqual([]);
+      let item = {
+        "product": "Jim Beam",
+        "inventory_code": 10002,
+        "type": "liquor",
+        "category": "whiskey",
+        "price": 16.99,
+        "size": 25.3,
+        "unit": "ounces"
+      }
+      wrapper.instance().changeCart(item, 'plusOne');
+      expect(wrapper.state('cartItems')).toHaveLength(1);
+    })
+
+    it('should subtract items from your cart ', () => {
+      let cartItems = [{
+        "product": "Jim Beam",
+        "inventory_code": 10002,
+        "type": "liquor",
+        "category": "whiskey",
+        "price": 16.99,
+        "size": 25.3,
+        "unit": "ounces"
+      },
+      {
+        "product": "Fireball",
+        "inventory_code": 10001,
+        "type": "liquor",
+        "category": "whiskey",
+        "price": 18.78,
+        "size": 33.8,
+        "unit": "ounces"
+      }];
+      
+      wrapper.setState({cartItems: cartItems})
+      
+      let item = {
+        "product": "Jim Beam",
+        "inventory_code": 10002,
+        "type": "liquor",
+        "category": "whiskey",
+        "price": 16.99,
+        "size": 25.3,
+        "unit": "ounces"
+      }
+      wrapper.instance().changeCart(item, 'minusOne');
+      expect(wrapper.state('cartItems')).toHaveLength(1);
+    })
+    
   });

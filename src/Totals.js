@@ -15,7 +15,8 @@ class Totals extends Component {
     return this.props.cartItems.map((item, index) => {
       return <section className="cart-products" key={index}>
         <div className="item-product"><h5>{item.product}</h5></div>
-        <div className="item-price"><h5>@ ${item.price.toFixed(2)}</h5></div>
+        <div className="item-quantity"><h5>{item.size} {item.unit}</h5></div>
+        <div className="item-price"><h5>${item.price.toFixed(2)}</h5></div>
         <div className="item-delete">
           <button onClick={() => this.props.changeCart(item)}>
             <i className="fas fa-times"></i>

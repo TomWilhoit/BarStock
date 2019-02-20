@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order should match snapshot when all data is passed correctly 1`] = `
+<div
+  className="Order-container"
+>
+  <form
+    className="Order"
+  >
+    <h3
+      className="order-quote"
+    >
+      Confirmation 
+    </h3>
+    <div
+      className="order-form"
+      id="myText"
+    />
+    <button
+      className="order-button"
+      onClick={[Function]}
+    >
+      Submit Order
+    </button>
+  </form>
+</div>
+`;
