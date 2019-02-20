@@ -1,75 +1,62 @@
-/* #region Liquor Product Container */
-.liquorProd {
-  overflow: hidden;
-  margin-top: .5em;
-  box-shadow: 0px 2px 7px 2px rgba(35, 31, 32, .2);
+$font-title: 'Abel', sans-serif;
+$dark-blue: #11212a;
+
+.Category-display {
+
+  ul {
+      margin: auto;
+      padding: 2em;
+  }
+
+  .liquorProd {
+    overflow: hidden;
+    margin-top: .5em;
+    box-shadow: 0px 2px 7px 2px rgba(35, 31, 32, .2);
+
+    &:first-child {
+      margin:0;
+    }
+
+    &.closed {
+        max-height: 49px;
+        height: auto;
+        transition: height 2s;
+        border-radius: 5px
+    }
+
+    &.open {
+        background: #fff;
+        max-height: 300px;
+        height: auto;
+        transition: max-height .5s linear;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    .Category {
+      list-style-type: none;
+      padding: .7em;
+      background: $dark-blue;
+      margin: 0;
+      letter-spacing: .07em;
+      box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, .5);
+
+      .Category-titles {
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1;
+        color: #fff;
+        font-size: 1.3em;
+        font-family: $font-title;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 520px) {
+    ul {
+      padding: 1em;
+    }
+  }
 }
-
-.liquorProd:first-child {
-    margin:0;
-}
-
-.liquorProd.closed {
-    max-height: 49px;
-    height: auto;
-    transition: height 2s;
-    border-radius: 5px
-}
-
-.liquorProd.open {
-    background: #fff;
-    max-height: 300px;
-    height: auto;
-    transition: max-height .5s linear;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-}
-/* #endregion Liquor Product Container */
-
-
-/* #region Cateogry Title */
-.Category-display ul {
-    margin: auto;
-    padding: 2em;
-}
-
-.Category {
-  list-style-type: none;
-  padding: .7em;
-  background: #11212a;
-  margin: 0;
-  letter-spacing: .07em;
-  box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, .5);
-}
-
-.Category .Category-titles {
-  text-align: center;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 1;
-  color: #fff;
-  font-size: 1.3em;
-  font-family: 'Abel', sans-serif;
-}
-/* #endregion Cateogry Title */
-
-
-/* #region products header titles */
-.product-header {
-  font-weight: 100;
-  font-size: .7em;
-  display: flex;
-  justify-content: space-evenly;
-  background: #fff9e8;
-  box-shadow: 0px 0px 1px 0px rgba(35, 31, 32, .4);
-}
-
-.product-header .header-title {
-  color: #4e4e4e;
-  flex-grow: 1;
-  padding: .5em;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-}
-/* #endregion products header titles */

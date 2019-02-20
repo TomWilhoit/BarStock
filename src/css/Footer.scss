@@ -1,9 +1,17 @@
-.Footer p {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 0;
-    color: #9a9a9a;
-    padding: .5em;
-    font-family: 'Abel', sans-serif;
+$font-title: 'Abel', sans-serif;
+
+.Footer-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 2em;
+
+  .Footer p {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin: 0;
+      color: #9a9a9a;
+      padding: .5em;
+      font-family: $font-title;
+  }
 }

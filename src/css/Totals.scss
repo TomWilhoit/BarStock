@@ -1,144 +1,160 @@
-/********************
-FONTS
-font-family: 'Open Sans', sans-serif;
-font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Raleway', sans-serif;
+$font-title: 'Abel', sans-serif;
+$font-copy: 'Lato', sans-serif;
+$medium-blue: #2c4969;
+$white: #fff;
+$dark-gray: #777777;
+$light-gray: #dadada;
+$light-blue: #0098de;
+$btn-orange: #EEAD0E;
 
-COLORS
-Orange #fdba35
-Blue Teal #3ebab4
-Medium Gray #5e666c
+.Totals-container {
 
-*********************/
-
-.Totals {
-  background: #fff;
-  box-shadow: 0px 1px 7px 0px rgba(35, 31, 32, .2);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-.total-label {
-  text-align: center;
-  font-family: 'Abel', sans-serif;
-  background: #dadada;
-}
-
-.total-label h3 {
-  color: #2c4969;
-  margin: 0;
-  padding: .2em;
-
-  font-weight: 100;
-}
-
-/* #region Cart Items */
-.cart-display {
-  overflow-y: scroll;
-  max-height: 250px;
-}
-
-.cart-products {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: .5em .75em;
-  border-bottom: solid 1px #ececec;
-}
-.cart-products:nth-of-type(2n) {
-  background:#f7f7f7cc;
-}
-
-.item-product {
-  width: 50%;
-}
-.item-product h5, 
-.item-price h5, 
-.item-quantity h5 {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  font-size: .8em;
-  font-weight: 100;
-  color: #777777;
-}
-
-.item-price,
-.item-quantity {
-  width: 20%;
-}
-
-.item-delete {
-  line-height: 0;
-}
-.item-delete button {
-  padding: 0;
-  border: none;
-  background: none;
-  color: #0098de;
-  cursor: pointer;
-  transition: all .3s ease;
-  outline:none;
-}
-.item-delete button:hover {
-  color:#dadada;
-}
-
-
-/* #endregion Cart Items */
-
-
-/* #region Totals Sum */
-
-.cost-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  background: #ececec;
-}
-
-.total-cost {
-  padding: .5em 1em;
-  background: #2c4969;
-  width: 50%;
-
-  h2 {
-   margin: 0;
-   font-family: 'Abel', sans-serif;
-   color:#fff;
-   font-size: 1.3em;
- }
-
- h3 {
-   margin: 0;
-   font-family: 'Abel', sans-serif;
-   color:#fff;
-   font-size: 1.3em;
-   letter-spacing: .01em;
- }
-}
-
-.returns-cost {
-  padding: .5em 1em;
-  width: 50%;
-
-  h2 {
+  .Totals {
+    background: $white;
+    box-shadow: 0px 1px 7px 0px rgba(35, 31, 32, .2);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    font-weight: 100;
-    font-size: .8em;
-    color:#2c4969;
-    font-family: 'Abel', sans-serif;
   }
 
-  h3 {
-    margin: 0;
-    font-weight: 100;
-    color:#2c4969;
-    font-family: 'Abel', sans-serif;
+  .total-label {
+    text-align: center;
+    font-family: $font-title;
+    background: $light-gray;
+
+    h3 {
+      color: $medium-blue;
+      margin: 0;
+      padding: .2em;
+      font-weight: 100;
+    }
+  }
+
+  .cart-display {
+    overflow-y: scroll;
+    max-height: 250px;
+
+    .cart-products {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .5em .75em;
+      border-bottom: solid 1px #ececec;
+    }
+
+    &:nth-of-type(2n) {
+      background:#f7f7f7cc;
+    }
+
+    .item-product {
+      width: 50%;
+    }
+    .item-price,
+    .item-quantity {
+      width: 20%;
+    }
+
+    .item-product h5,
+    .item-price h5,
+    .item-quantity h5 {
+      font-family: $font-copy;
+      margin: 0;
+      font-size: .8em;
+      font-weight: 100;
+      color: $dark-gray;
+    }
+
+    .item-delete {
+      line-height: 0;
+      button {
+        padding: 0;
+        border: none;
+        background: none;
+        color: $light-blue;
+        cursor: pointer;
+        transition: all .3s ease;
+        outline:none;
+
+        &:hover {
+          color: $light-gray;
+        }
+      }
+    }
+
+  }
+
+  .cost-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background: #ececec;
+  }
+
+  .returns-cost {
+    padding: .5em 1em;
+    width: 50%;
+
+    h2 {
+      margin: 0;
+      font-weight: 100;
+      font-size: .8em;
+      color: $medium-blue;
+      font-family: $font-title;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 100;
+      color: $medium-blue;
+      font-family: $font-title;
+    }
+  }
+
+  .total-cost {
+    padding: .5em 1em;
+    background: $medium-blue;
+    width: 50%;
+
+    h2 {
+     margin: 0;
+     font-family: $font-title;
+     color: $white;
+     font-size: 1.3em;
+   }
+
+   h3 {
+     margin: 0;
+     font-family: $font-title;
+     color: $white;
+     font-size: 1.3em;
+     letter-spacing: .01em;
+   }
   }
 }
 
-/* #endregion Totals Sum */
+.Submit-order {
+  button {
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    background: $btn-orange;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1em;
+    padding: .2em;
+    font-family: $font-title;
+    cursor: pointer;
+    &.disabled {
+      pointer-events: none;
+      opacity: .2;
+    }
+    &.enabled {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+}

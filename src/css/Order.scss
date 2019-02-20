@@ -1,3 +1,10 @@
+$font-title: 'Abel', sans-serif;
+$font-copy: 'Lato', sans-serif;
+$dark-blue: #11212a;
+$btn-orange: #EEAD0E;
+$dark-gray: #777777;
+$white: #fff;
+
 .Order-container {
   display: flex;
   flex-direction: column;
@@ -25,40 +32,43 @@
     display: flex;
     flex-direction: column;
     z-index: 999;
+
     h3 {
       margin: 0;
-      background-color: #11212a;
-      color: #fff;
+      background-color: $dark-blue;
+      color: $white;
       text-transform: uppercase;
-      // margin-bottom: 1em;
-      font-family: 'Abel', sans-serif;
+      font-family: $font-title;
       display: flex;
       align-items: center;
       height: 50px;
       padding-left: 1em;
     }
+
     .order-form {
       width: 300px;
-      background: #fff;
+      background: $white;
       max-height: 350px;
       overflow-y: scroll;
+
       li {
         list-style-type: none;
         padding: .5em 1em;
         border-bottom: #cccccc solid 1px;
+
         h5 {
           margin: auto;
-          font-family: 'Lato', sans-serif;
+          font-family: $font-copy;
           font-size: .8em;
           font-weight: 100;
-          color: #777777;
+          color: $dark-gray;
         }
       }
     }
 
     .thank-you {
       width: 300px;
-      background: #fff;
+      background: $white;
     }
 
     .order-button,
@@ -67,12 +77,11 @@
       height: 30px;
       border-radius: 5px;
       font-size: 1rem;
-      background-color:	#EEAD0E;
-      color: #fff;
+      background-color:	$btn-orange;
+      color: $white;
       outline: none;
       border: none;
-      font-family: 'Abel', sans-serif;
+      font-family: $font-title;
     }
   }
-
 }
