@@ -1,18 +1,15 @@
-import React from 'react';
-import App from '../App';
-import { shallow } from 'enzyme';
-import Footer from '../Footer';
+import React from "react";
+import App from "../App";
+import { shallow } from "enzyme";
+import Footer from "../Footer";
 
-
-describe('Footer', () => {
+describe("Footer", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(
-      <Footer/>
-      )
-    });
-    it('should match snapshot when all data is passed correctly', () => {
-      expect(wrapper).toMatchSnapshot();
-    });
-  })
+    wrapper = shallow(<Footer />);
+  });
+  it("should match snapshot when all data is passed correctly", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});

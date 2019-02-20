@@ -5,6 +5,11 @@ exports[`Header should match snapshot when all data is passed correctly 1`] = `
   className="Header"
 >
   <div
+    className="welcome-message"
+  >
+    Welcome: 
+  </div>
+  <div
     className="logo-container"
   >
     <img
@@ -15,8 +20,7 @@ exports[`Header should match snapshot when all data is passed correctly 1`] = `
   <div
     className="welcome-message"
   >
-    Welcome Back 
-    ! Account# 1811FE
+    Account# 1811FE
   </div>
 </div>
 `;

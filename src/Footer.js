@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import MockData from './mockData.js';
-import App from './App.js';
-import './css/Footer.scss';
+import React from "react";
+import "./css/Footer.scss";
 
 const Footer = () => {
   return (
@@ -10,13 +8,5 @@ const Footer = () => {
     </div>
   );
 };
-
-
-
-
-
-
-
-
 
 export default Footer;
