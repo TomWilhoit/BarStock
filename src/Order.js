@@ -41,6 +41,7 @@ class Order extends Component {
           <div id="myText" className="order-form">
             {this.displayObjects()}
           </div>
+          <h3>Total ${this.props.finalTotal.toFixed(2)}</h3>
           <button className="order-button" onClick={this.send}>Submit Order</button>
         </form>
       </div>

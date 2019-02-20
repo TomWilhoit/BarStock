@@ -53,11 +53,14 @@ class App extends Component {
 
 
   changeCart = (item, math) => {
-    const allCartItems = this.state.cartItems
+    const allCartItems = this.state.cartItems;
+    let totalCost = this.state.totalCost;
     if (math === "plusOne") {
+      totalCost += item.price;
       allCartItems.push(item);
       this.setState({
-        cartItems: allCartItems
+        cartItems: allCartItems,
+        totalCost: totalCost
       })
     } else {
       const foundItem = allCartItems.findIndex(cartItem => {
@@ -111,6 +114,7 @@ class App extends Component {
         <div className="App">
             <Order  cartItems={this.state.cartItems}
                     user={this.state.currentUser}
+                    finalTotal={this.state.totalCost}
                   />
         </div>
       )
@@ -134,7 +138,7 @@ class App extends Component {
                         changeCart={this.changeCart}
                       />
                 <section className="Submit-order">
-                  <button className={submitClass} onClick={this.submitOrder}>Place Order</button>
+                  <button className={submitClass} onClick={this.submitOrder}>Checkout</button>
                 </section>
               </div>
             </div>
