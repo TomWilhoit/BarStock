@@ -1,42 +1,14 @@
-/********************
-FONTS
-font-family: 'Roboto Condensed', sans-serif;
-font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Abel', sans-serif;
-font-family: 'Open Sans', sans-serif;
+$font-title: 'Abel', sans-serif;
+$font-copy: 'Lato', sans-serif;
+$font-subHeader: 'Raleway', sans-serif;
+$dark-blue: #11212a;
+$medium-blue: #2c4969;
+$light-blue: #0098de;
+$light-gray: #adadad;
+$btn-orange: #EEAD0E;
+$dark-gray: #777777;
+$white: #fff;
 
-COLORS
-Orange #fdba35
-Blue Teal #3ebab4
-Medium Gray #5e666c
-
-NEW PALETTE:
-Dark Gold: #EEAD0E
-Light Gold: #F8DE9E
-Dark Gray: #bbbbbb
-Light Gray: #cfcfcf
-Brown: #7d6c54
-Black: #1d2023
-White: #ffffff
-
-*********************/
-
-/* #region Global */
-html {
-  height: 100%;
-  background: #dedede;
-  background: url(./dust_scratches.png);
-}
-
-body {
-  height: 100%;
-}
-
-/* #endRegion Global */
-
-#root {
-  height: 100%;
-}
 
 .App {
   height: 100%;
@@ -48,15 +20,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
-
-.Header-container {
-  margin-bottom: 2em;
-}
-
-
-/* #region Content Container  */
-
 
 .content-container {
   display: table;
@@ -78,45 +41,11 @@ body {
   vertical-align: bottom;
 }
 
-/* #endRegion Content Container */
-
-
-.Submit-order {
-  button {
-    width: 100%;
-    border-radius: 4px;
-    outline: none;
-    background: #EEAD0E;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 100;
-    font-size: 1em;
-    padding: .2em;
-    font-family: 'Abel', sans-serif;
-    cursor: pointer;
-    &.disabled {
-      pointer-events: none;
-      opacity: .2;
-    }
-    &.enabled {
-      pointer-events: all;
-      opacity: 1;
-    }
-  }
-}
-
-
-.Footer-container {
-  width: 100%;
-  text-align: center;
-  margin-top: 2em;
-}
-
-
 
 @media only screen and (max-width: 800px) {
   .content-container {
     display: block;
+    width: 90%;
   }
   .Inventory-container {
     margin: auto;
@@ -132,5 +61,12 @@ body {
     width: 100%;
     padding: 0;
     max-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .content-container {
+    display: block;
+    width: 90%;
   }
 }

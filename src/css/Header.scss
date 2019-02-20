@@ -1,25 +1,43 @@
+$font-title: 'Abel', sans-serif;
+$dark-blue: #11212a;
+
+.Header-container {
+  margin-bottom: 2em;
+}
+
 .Header {
-    background: #11212a;
+    background: $dark-blue;
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
 
-.logo-container {
-    text-align: center;
-    box-shadow: 0px 3px 5px 1px rgba(35, 31, 32, .2);
-}
+    .logo-container {
+        text-align: center;
+        box-shadow: 0px 3px 5px 1px rgba(35, 31, 32, .2);
 
-.logo-container img {
-    width: 100%;
-    max-width: 200px;
-    padding: 0;
-}
+        img {
+            width: 100%;
+            max-width: 200px;
+            padding: 0;
+        }
+    }
 
-.welcome-message {
-  justify-content: right;
-  display: flex;
-  padding: 0;
-  font-family: 'Abel', sans-serif;
-  color:#fff;
+    .welcome-message {
+      justify-content: right;
+      display: flex;
+      padding: 0;
+      font-family: $font-title;
+      color:#fff;
+    }
+
+    @media only screen and (max-width: 520px) {
+      .welcome-message {
+        display: none;
+      }
+
+      .logo-container {
+        max-width: 150px;
+        padding:.5em 0;
+      }
+    }
 }
