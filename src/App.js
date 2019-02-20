@@ -20,7 +20,7 @@ class App extends Component {
       cartItems: [],
       cartMenu: [],
       totalCost: 0,
-      totalProjected: 0,
+      // totalProjected: 0,
       currentUser: "",
       finalOrder: false
     }
@@ -66,9 +66,11 @@ class App extends Component {
       const foundItem = allCartItems.findIndex(cartItem => {
         return cartItem === item;
       });
+      totalCost -= allCartItems[foundItem].price
       allCartItems.splice(foundItem, 1)
       this.setState({
-        cartItems: allCartItems
+        cartItems: allCartItems,
+        totalCost: totalCost
       })
     }
   }
@@ -85,6 +87,13 @@ class App extends Component {
   submitOrder = () => {
     this.setState({
       finalOrder: true
+    })
+  } 
+
+  backToCart = () => {
+    this.setState({
+      finalOrder: false,
+      loginDisplay: false
     })
   } 
 
@@ -115,6 +124,7 @@ class App extends Component {
             <Order  cartItems={this.state.cartItems}
                     user={this.state.currentUser}
                     finalTotal={this.state.totalCost}
+                    backToCart={this.backToCart}
                   />
         </div>
       )
