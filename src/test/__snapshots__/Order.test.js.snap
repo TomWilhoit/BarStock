@@ -16,11 +16,20 @@ exports[`Order should match snapshot when all data is passed correctly 1`] = `
       className="order-form"
       id="myText"
     />
+    <h3>
+      Total $
+      0.00
+    </h3>
     <button
       className="order-button"
       onClick={[Function]}
     >
       Submit Order
+    </button>
+    <button
+      className="back-button"
+    >
+      Back to Cart
     </button>
   </form>
 </div>

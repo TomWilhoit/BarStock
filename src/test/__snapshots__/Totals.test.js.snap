@@ -26,10 +26,19 @@ exports[`Totals should match snapshot when all data is passed correctly 1`] = `
         </h5>
       </div>
       <div
+        className="item-quantity"
+      >
+        <h5>
+          33.8
+           
+          ounces
+        </h5>
+      </div>
+      <div
         className="item-price"
       >
         <h5>
-          @ $
+          $
           18.78
         </h5>
       </div>
@@ -57,10 +66,19 @@ exports[`Totals should match snapshot when all data is passed correctly 1`] = `
         </h5>
       </div>
       <div
+        className="item-quantity"
+      >
+        <h5>
+          25.3
+           
+          ounces
+        </h5>
+      </div>
+      <div
         className="item-price"
       >
         <h5>
-          @ $
+          $
           16.99
         </h5>
       </div>
