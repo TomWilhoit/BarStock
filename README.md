@@ -13,8 +13,8 @@ BarStock is an app that makes it easier for bar owners to place orders from thei
 
 ## Setup
 
-- git clone: https://github.com/TomWilhoit/BarStock
-- npm install from the project directory 
+- <code>git clone</code> https://github.com/TomWilhoit/BarStock
+- <code>npm install</code> from the project directory 
 
 ### Built With
 
