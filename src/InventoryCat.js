@@ -19,7 +19,6 @@ class InventoryCat extends Component {
           <li className="Category">
             <h2 className="Category-titles">{this.props.category}</h2>
           </li>
-
           <InventoryProd
             allProducts={this.props.products}
             category={this.props.category}

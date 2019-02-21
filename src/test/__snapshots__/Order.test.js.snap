@@ -10,7 +10,7 @@ exports[`Order should match snapshot when all data is passed correctly 1`] = `
     <h3
       className="order-quote"
     >
-      Confirmation 
+      Confirmation for 
     </h3>
     <div
       className="order-form"

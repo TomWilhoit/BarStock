@@ -9,10 +9,6 @@ export class Order extends Component {
     };
   }
 
-  componentDidMount() {
-    this.displayObjects();
-  }
-
   displayObjects = () => {
     let sumCart = this.props.cartItems.reduce((acc, el) => {
       if (!acc[el.product]) {
@@ -43,15 +39,17 @@ export class Order extends Component {
   render() {
     if (this.state.orderComplete === true) {
       return (
-        <div className="Order">
-          <h3>Thanks for your order!</h3>
+        <div className="Order-container">
+          <div className="Order">
+            <h1 className="thank-you">Thanks for your order!</h1>
+          </div>
         </div>
       );
     } else {
       return (
         <div className="Order-container">
           <form className="Order">
-            <h3 className="order-quote">Confirmation {this.props.user}</h3>
+            <h3 className="order-quote">Confirmation for {this.props.user}</h3>
             <div id="myText" className="order-form">
               {this.displayObjects()}
             </div>
