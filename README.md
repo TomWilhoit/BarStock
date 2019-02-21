@@ -18,7 +18,7 @@ BarStock is an app that makes it easier for bar owners to place orders from thei
 
 ### Built With
 
-- HTML, SCSS, JavasSript
+- HTML, CSS / SCSS, JavasSript
 - React
 - Jest / Enzyme 
 
