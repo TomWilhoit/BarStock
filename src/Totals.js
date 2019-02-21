@@ -33,20 +33,20 @@ class Totals extends Component {
   };
 
   totalCost = () => {
-    return this.props.cartItems.reduce((acc, currObj) => {
-      return (acc += currObj.price);
+    return this.props.cartItems.reduce((acc, distObj) => {
+      return (acc += distObj.price);
     }, 0);
   };
 
   totalProfit = () => {
-    return this.props.cartItems.reduce((acc, currObj) => {
-      let menuObj = this.props.cartMenu.find(item => {
-        return item.inventory_code === currObj.inventory_code;
+    return this.props.cartItems.reduce((acc, distObj) => {
+      let menuObj = this.props.cartMenu.find(menuObj => {
+        return menuObj.inventory_code === distObj.inventory_code;
       });
-      let distProdServSize = currObj.size;
+      let distProdServSize = distObj.size;
       let menuProdServSize = menuObj.serving_size;
       let menuPrice = menuObj.price_per_drink;
-      let distCost = currObj.price;
+      let distCost = distObj.price;
       return (acc +=
         (distProdServSize / menuProdServSize) * menuPrice - distCost);
     }, 0);

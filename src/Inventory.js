@@ -36,7 +36,6 @@ class Inventory extends Component {
     });
   };
 
-  // Refactor
   toggleType = event => {
     if (this.state.displayType === "beer") {
       this.setState({
@@ -82,12 +81,12 @@ class Inventory extends Component {
     return (
       <div className="Inventory">
         <div className="Inventory-toggles">
-          <button id="0" className={beerClass} onClick={this.toggleType}>
+          <button className={beerClass} onClick={this.toggleType}>
             <h3>
               <i className="fas fa-beer" /> Beer
             </h3>
           </button>
-          <button id="1" className={liquorClass} onClick={this.toggleType}>
+          <button className={liquorClass} onClick={this.toggleType}>
             <h3>
               <i className="fas fa-glass-whiskey" /> Liquor
             </h3>
