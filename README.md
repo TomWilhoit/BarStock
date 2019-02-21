@@ -37,6 +37,6 @@ BarStock is an app that makes it easier for bar owners to place orders from thei
 - Tom Wilhoit
 
 ## Original Assignment
-<a href=http://frontend.turing.io/projects/whateverly.html>Whateverly</a> project from Turing School of Software and Design, Mod 2
+<a href=http://frontend.turing.io/projects/whateverly.html>Whateverly</a> project from <a href="https://turing.io/">Turing School of Software and Design</a>, Mod 2
 
 
