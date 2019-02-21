@@ -43,8 +43,10 @@ export class Order extends Component {
   render() {
     if (this.state.orderComplete === true) {
       return (
-        <div className="Order">
-          <h3>Thanks for your order!</h3>
+        <div className="Order-container">
+          <div className="Order">
+            <h1 className="thank-you">Thanks for your order!</h1>
+          </div>
         </div>
       );
     } else {
