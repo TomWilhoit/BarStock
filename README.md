@@ -13,10 +13,11 @@ BarStock is an app that makes it easier for bar owners to place orders from thei
 
 ## Setup
 
-git clone: https://github.com/TomWilhoit/BarStock
-npm install from the project directory 
+- git clone: https://github.com/TomWilhoit/BarStock
+- npm install from the project directory 
 
-### Built With:
+### Built With
+
 - HTML, SCSS, JavasSript
 - React
 - Jest / Enzyme 
@@ -36,6 +37,6 @@ npm install from the project directory
 - Tom Wilhoit
 
 ## Original Assignment
-Whateverly project from Turing School of Software and Design, Mod 2
-http://frontend.turing.io/projects/whateverly.html
+<a href=http://frontend.turing.io/projects/whateverly.html>Whateverly</a> project from Turing School of Software and Design, Mod 2
+
 
